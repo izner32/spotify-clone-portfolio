@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import AsideLeft from '@/components/AsideLeft';
 import AsideRight from '@/components/AsideRight';
-import Footer from '@/components/footer';
+import Player from '@/components/Player';
 import Section from '@/components/section';
 
 /**
@@ -23,7 +23,7 @@ export default function HomePage() {
       <AsideLeft></AsideLeft>
       <Section></Section>
       <AsideRight></AsideRight>
-      <Footer></Footer>
+      <Player></Player>
     </>
   );
 }
