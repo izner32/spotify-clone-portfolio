@@ -1,5 +1,10 @@
 import * as React from 'react';
 
+import AsideLeft from '@/components/AsideLeft';
+import AsideRight from '@/components/AsideRight';
+import Footer from '@/components/footer';
+import Section from '@/components/section';
+
 /**
  * SVGR Support
  * Caveat: No React Props Type.
@@ -13,5 +18,12 @@ import * as React from 'react';
 // to customize the default configuration.
 
 export default function HomePage() {
-  return <></>;
+  return (
+    <>
+      <AsideLeft></AsideLeft>
+      <Section></Section>
+      <AsideRight></AsideRight>
+      <Footer></Footer>
+    </>
+  );
 }
