@@ -1,10 +1,4 @@
-import Document, {
-  DocumentContext,
-  Head,
-  Html,
-  Main,
-  NextScript,
-} from 'next/document';
+import Document, { DocumentContext, Head, Html } from 'next/document';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -16,18 +10,18 @@ class MyDocument extends Document {
     return (
       <Html lang='en'>
         <Head>
-          <link
+          {/* <link
             rel='preload'
             href='/fonts/inter-var-latin.woff2'
             as='font'
             type='font/woff2'
             crossOrigin='anonymous'
-          />
+          /> */}
         </Head>
-        <body>
+        {/* <body>
           <Main />
           <NextScript />
-        </body>
+        </body> */}
       </Html>
     );
   }
