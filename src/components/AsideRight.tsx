@@ -3,7 +3,7 @@ import React from 'react';
 
 function AsideRight() {
   return (
-    <aside className='w-60 bg-black p-6 text-white'>
+    <aside className='w-60 bg-black p-6 text-xs text-white'>
       <div className='flex h-full flex-col '>
         <div className='mb-10 flex justify-between'>
           <p>Friend Activity</p>

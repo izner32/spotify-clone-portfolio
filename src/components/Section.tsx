@@ -69,7 +69,10 @@ function section() {
         {/* skills section */}
         <div className=''>
           <div className='py-4'>
-            <p>Skills</p>
+            <div className='flex justify-between'>
+              <p>Skills</p>
+              <p>SEE ALL</p>
+            </div>
             <div className='mt-5 grid grid-cols-5 gap-x-5 gap-y-4'>
               {section.map((item, index) => {
                 return (
@@ -96,7 +99,10 @@ function section() {
         {/* projects section */}
         <div className=''>
           <div className='py-4'>
-            <p>Projects</p>
+            <div className='flex justify-between'>
+              <p>Projects</p>
+              <p>SEE ALL</p>
+            </div>
             <div className='mt-5 grid grid-cols-5 gap-x-5 gap-y-4'>
               {section.map((item, index) => {
                 return (
@@ -107,9 +113,12 @@ function section() {
                       width={160}
                       height={160}
                     ></Image>
-                    <p className='flex items-center justify-center'>
-                      <span>{item.name}</span>
-                    </p>
+                    <div className='py-4'>
+                      <p className=''>
+                        <span>{item.name}</span>
+                      </p>
+                      <p>By Spotify</p>
+                    </div>
                   </div>
                 );
               })}
