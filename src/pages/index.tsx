@@ -20,9 +20,11 @@ import Section from '@/components/section';
 export default function HomePage() {
   return (
     <>
-      <AsideLeft></AsideLeft>
-      <Section></Section>
-      <AsideRight></AsideRight>
+      <div className='flex justify-between'>
+        <AsideLeft></AsideLeft>
+        <Section></Section>
+        <AsideRight></AsideRight>
+      </div>
       <Footer></Footer>
     </>
   );
