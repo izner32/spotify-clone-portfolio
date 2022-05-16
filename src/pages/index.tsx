@@ -3,7 +3,7 @@ import * as React from 'react';
 import AsideLeft from '@/components/AsideLeft';
 import AsideRight from '@/components/AsideRight';
 import Player from '@/components/Player';
-import Section from '@/components/section';
+import Section from '@/components/Section';
 
 /**
  * SVGR Support
@@ -20,7 +20,7 @@ import Section from '@/components/section';
 export default function HomePage() {
   return (
     <>
-      <div className='flex justify-between'>
+      <div className='flex'>
         <AsideLeft></AsideLeft>
         <Section></Section>
         <AsideRight></AsideRight>
