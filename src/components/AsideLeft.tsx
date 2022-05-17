@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 function AsideLeft() {
@@ -23,7 +24,7 @@ function AsideLeft() {
         <ul>
           <li className='flex gap-x-5'>
             <Image src='/new-tab.png' alt='Renz' width={20} height={20}></Image>
-            <p>Create Playlist</p>
+            <p className='whitespace-nowrap'>Create Playlist</p>
           </li>
           <li className='flex gap-x-5'>
             <Image src='/new-tab.png' alt='Renz' width={20} height={20}></Image>
@@ -33,8 +34,12 @@ function AsideLeft() {
       </div>
       <div className='h-48'>
         <ul className=''>
-          <li>My Playlist #1</li>
-          <li>My Playlist #2</li>
+          <li>
+            <Link href='/playlist/first'>My Playlist #1</Link>
+          </li>
+          <li>
+            <Link href='/playlist/first'>My Playlist #2</Link>
+          </li>
           <li>About</li>
           <li>Projects</li>
           <li>Contact</li>
