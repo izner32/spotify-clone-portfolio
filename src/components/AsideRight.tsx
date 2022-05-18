@@ -3,16 +3,16 @@ import React from 'react';
 
 function AsideRight() {
   return (
-    <aside className='w-60 bg-black p-6 text-xs text-white'>
+    <aside className='h-[100vh] w-80 overflow-hidden bg-black p-6 text-sm text-spotify-gray'>
       <div className='flex h-full flex-col '>
-        <div className='mb-10 flex justify-between'>
+        <div className='mb-10 flex justify-between font-spotify-circular-bold'>
           <p>Friend Activity</p>
-          <div className='flex items-center justify-center'>
+          <div className='flex items-center justify-center '>
             <Image src='/new-tab.png' alt='Renz' width={20} height={20}></Image>
             <Image src='/new-tab.png' alt='Renz' width={20} height={20}></Image>
           </div>
         </div>
-        <div className='mb-6'>
+        <div className='mb-6 font-spotify-circular-light text-sm'>
           <p className='mb-6'>
             Let friends and followers on Spotify see what you&apos;re listening
             to
@@ -66,8 +66,10 @@ function AsideRight() {
             activity on Renzify.&apos; You can turn this off at any time.
           </p>
         </div>
-        <div>
-          <button>SETTINGS</button>
+        <div className='flex items-center justify-center font-spotify-circular-book '>
+          <button className='rounded-full bg-white px-12 py-3.5'>
+            <span className='text-black'>SETTINGS</span>
+          </button>
         </div>
       </div>
     </aside>

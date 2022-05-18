@@ -30,24 +30,24 @@ function section() {
   ];
 
   return (
-    <div className='h-[36rem] w-full overflow-y-scroll bg-black py-4 px-8 text-white'>
-      <div className='flex justify-between pb-4'>
+    <div className='h-[86vh] w-full overflow-y-scroll bg-black py-4 px-8 text-white'>
+      <div className='flex justify-between pb-4 text-sm'>
         <div className='flex gap-x-4'>
           <Image src='/new-tab.png' alt='Renz' width={32} height={32}></Image>
           <Image src='/new-tab.png' alt='Renz' width={32} height={32}></Image>
         </div>
-        <div className='flex w-32 justify-between'>
+        <div className='flex w-32 items-center justify-between'>
           <Image src='/new-tab.png' alt='Renz' width={32} height={32}></Image>
-          <p>Renz</p>
+          <p className='font-spotify-circular-bold'>Renz</p>
           <Image src='/new-tab.png' alt='Renz' width={32} height={32}></Image>
         </div>
       </div>
 
       <div className='mb-10 flex flex-col gap-y-10'>
         {/* sections list  */}
-        <div className='py-4'>
-          <p>Good afternoon</p>
-          <div className='mt-5 grid grid-cols-3 gap-x-5 gap-y-4'>
+        <div className='py-4 font-spotify-circular-bold'>
+          <p className='text-3xl '>Good afternoon</p>
+          <div className='mt-5 grid grid-cols-3 gap-x-5 gap-y-4 text-base'>
             {section.map((item, index) => {
               return (
                 <div key={index} className='flex '>
@@ -69,9 +69,9 @@ function section() {
         {/* skills section */}
         <div className=''>
           <div className='py-4'>
-            <div className='flex justify-between'>
-              <p>Skills</p>
-              <p>SEE ALL</p>
+            <div className='flex items-center justify-between font-spotify-circular-bold'>
+              <p className='text-2xl'>Skills</p>
+              <p className='text-xs text-spotify-gray'>SEE ALL</p>
             </div>
             <div className='mt-5 grid grid-cols-5 gap-x-5 gap-y-4'>
               {section.map((item, index) => {
@@ -84,10 +84,12 @@ function section() {
                       height={160}
                     ></Image>
                     <div className='py-4'>
-                      <p className=''>
+                      <p className='font-spotify-circular-bold text-base'>
                         <span>{item.name}</span>
                       </p>
-                      <p>By Spotify</p>
+                      <p className='font-spotify-circular-light text-sm text-spotify-gray'>
+                        By Spotify
+                      </p>
                     </div>
                   </div>
                 );
@@ -99,9 +101,9 @@ function section() {
         {/* projects section */}
         <div className=''>
           <div className='py-4'>
-            <div className='flex justify-between'>
-              <p>Projects</p>
-              <p>SEE ALL</p>
+            <div className='flex items-center justify-between font-spotify-circular-bold'>
+              <p className='text-2xl'>Projects</p>
+              <p className='text-xs text-spotify-gray'>SEE ALL</p>
             </div>
             <div className='mt-5 grid grid-cols-5 gap-x-5 gap-y-4'>
               {section.map((item, index) => {
@@ -114,10 +116,12 @@ function section() {
                       height={160}
                     ></Image>
                     <div className='py-4'>
-                      <p className=''>
+                      <p className='font-spotify-circular-bold text-base'>
                         <span>{item.name}</span>
                       </p>
-                      <p>By Spotify</p>
+                      <p className='font-spotify-circular-light text-sm text-spotify-gray'>
+                        By Spotify
+                      </p>
                     </div>
                   </div>
                 );

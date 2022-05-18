@@ -28,6 +28,7 @@ module.exports = {
 
       },
       colors: {
+        'spotify-gray': '#C6C6C6',
         primary: {
           // Customize it on globals.css :root
           50: withOpacityValue('--tw-color-primary-50'),

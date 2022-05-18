@@ -20,12 +20,14 @@ import Section from '@/components/Section';
 export default function HomePage() {
   return (
     <>
-      <div className='flex'>
-        <AsideLeft></AsideLeft>
-        <Section></Section>
-        <AsideRight></AsideRight>
+      <div className='flex h-screen flex-col'>
+        <div className='flex'>
+          <AsideLeft></AsideLeft>
+          <Section></Section>
+          <AsideRight></AsideRight>
+        </div>
+        <Player></Player>
       </div>
-      <Player></Player>
     </>
   );
 }

@@ -46,7 +46,7 @@ function Projects() {
   ];
 
   return (
-    <div className='h-[36rem] w-full overflow-y-scroll bg-black py-4 px-8 text-white'>
+    <div className='h-[86vh] w-full overflow-y-scroll bg-black py-4 px-8 text-white'>
       <div className='flex justify-between pb-4'>
         <div className='flex gap-x-4'>
           <Image src='/new-tab.png' alt='Renz' width={32} height={32}></Image>
