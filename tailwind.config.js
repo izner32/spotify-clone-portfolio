@@ -17,6 +17,15 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ['Inter', ...fontFamily.sans],
+        "spotify-circular-normal": ['spotify-circular-normal', ...fontFamily.sans],
+        "spotify-circular-italic": ['spotify-circular-italic', ...fontFamily.sans],
+        "spotify-circular-bold": ['spotify-circular-bold', ...fontFamily.sans],
+        "spotify-circular-book": ['spotify-circular-book', ...fontFamily.sans],
+        "spotify-circular-book-italic": ['spotify-circular-book-italic', ...fontFamily.sans],
+        "spotify-circular-light": ['spotify-circular-light', ...fontFamily.sans],
+        "spotify-circular-medium": ['spotify-circular-medium', ...fontFamily.sans],
+        "spotify-circular-medium-italic": ['spotify-circular-medium-italic', ...fontFamily.sans],
+
       },
       colors: {
         primary: {

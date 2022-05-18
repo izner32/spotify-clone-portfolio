@@ -41,6 +41,46 @@
       U+2215, U+FEFF, U+FFFD;
   }
 
+  @font-face {
+    font-family: 'spotify-circular-normal';
+    src: url('/fonts/CircularSpotifyText-Black.otf');
+  }
+
+  @font-face {
+    font-family: 'spotify-circular-italic';
+    src: url('/fonts/CircularSpotifyText-BlackItalic.otf');
+  }
+
+  @font-face {
+    font-family: 'spotify-circular-bold';
+    src: url('/fonts/CircularSpotifyText-Bold.otf');
+  }
+
+  @font-face {
+    font-family: 'spotify-circular-book';
+    src: url('/fonts/CircularSpotifyText-Book.otf');
+  }
+
+  @font-face {
+    font-family: 'spotify-circular-book-italic';
+    src: url('/fonts/CircularSpotifyText-BookItalic.otf');
+  }
+
+  @font-face {
+    font-family: 'spotify-circular-light';
+    src: url('/fonts/CircularSpotifyText-Light.otf');
+  }
+
+  @font-face {
+    font-family: 'spotify-circular-medium';
+    src: url('/fonts/CircularSpotifyText-Medium.otf');
+  }
+
+  @font-face {
+    font-family: 'spotify-circular-medium-italic';
+    src: url('/fonts/CircularSpotifyText-MediumItalic.otf');
+  }
+
   .cursor-newtab {
     cursor: url('/images/new-tab.png') 10 10, pointer;
   }
