@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-function Projects() {
+function Projects(props) {
   const section: { name: string; image: string }[] = [
     {
       name: 'My Playlist #1',
@@ -46,27 +46,19 @@ function Projects() {
   ];
 
   return (
-    <div className='h-[86vh] w-full overflow-y-scroll bg-black py-4 px-8 text-white'>
-      <div className='flex justify-between pb-4'>
-        <div className='flex gap-x-4'>
-          <Image src='/new-tab.png' alt='Renz' width={32} height={32}></Image>
-          <Image src='/new-tab.png' alt='Renz' width={32} height={32}></Image>
+    <div className=''>
+      <div className='py-4'>
+        <div className='flex items-center justify-between font-spotify-circular-bold'>
+          <p className='text-2xl'>Projects</p>
+          <p className='text-xs text-spotify-gray'>SEE ALL</p>
         </div>
-        <div className='flex w-32 justify-between'>
-          <Image src='/new-tab.png' alt='Renz' width={32} height={32}></Image>
-          <p>Renz</p>
-          <Image src='/new-tab.png' alt='Renz' width={32} height={32}></Image>
-        </div>
-      </div>
-
-      <div className=''>
-        <div className='py-4'>
-          <div className='flex items-center justify-between font-spotify-circular-bold'>
-            <p className='text-2xl'>Projects</p>
-            <p className='text-xs text-spotify-gray'>SEE ALL</p>
-          </div>
-          <div className='mt-5 grid grid-cols-5 gap-x-5 gap-y-4'>
-            {section.map((item, index) => {
+        <div className='mt-5 grid grid-cols-5 gap-x-5 gap-y-4'>
+          {section
+            .slice(
+              0,
+              props.projectsLimit ? props.projectsLimit : section.length
+            )
+            .map((item, index) => {
               return (
                 <div key={index} className='flex flex-col p-4'>
                   <Image
@@ -86,7 +78,6 @@ function Projects() {
                 </div>
               );
             })}
-          </div>
         </div>
       </div>
     </div>

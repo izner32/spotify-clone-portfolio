@@ -2,8 +2,11 @@ import * as React from 'react';
 
 import AsideLeft from '@/components/AsideLeft';
 import AsideRight from '@/components/AsideRight';
+import Sections from '@/components/index/Sections';
 import Player from '@/components/Player';
-import Section from '@/components/Section';
+import Projects from '@/components/Projects';
+import Skills from '@/components/Skills';
+import TopNav from '@/components/TopNav';
 
 /**
  * SVGR Support
@@ -18,12 +21,22 @@ import Section from '@/components/Section';
 // to customize the default configuration.
 
 export default function HomePage() {
+  const skillsLimit = 5;
+  const projectsLimit = 5;
+
   return (
     <>
       <div className='flex h-screen flex-col'>
         <div className='flex'>
           <AsideLeft></AsideLeft>
-          <Section></Section>
+          <div className='h-[86vh] w-full overflow-y-scroll bg-black py-6 px-8 text-white'>
+            <TopNav></TopNav>
+            <div className='mb-10 flex flex-col gap-y-10'>
+              <Sections></Sections>
+              <Skills skillsLimit={skillsLimit}></Skills>
+              <Projects projectsLimit={projectsLimit}></Projects>
+            </div>
+          </div>
           <AsideRight></AsideRight>
         </div>
         <Player></Player>
