@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 function Playlist() {
@@ -21,12 +22,16 @@ function Playlist() {
       <div className='flex gap-x-6 pt-9 pb-6'>
         <Image src='/new-tab.png' alt='Renz' width={240} height={240}></Image>
         <div className='flex flex-col justify-end'>
-          <p>PLAYLIST</p>
-          <h1 className=''>My Playlist #1</h1>
-          <div className='flex'>
-            <p>Renz Carillo</p>
+          <p className='font-spotify-circular-bold text-[12px]'>PLAYLIST</p>
+          <h1 className='text-7xl'>My Playlist #1</h1>
+          <div className='flex font-spotify-circular-light text-sm'>
+            <Link href='/profile'>
+              <a className='font-spotify-circular-bold hover:underline'>
+                Renz Carillo
+              </a>
+            </Link>
             <p>&nbsp;• 177 Songs,</p>
-            <p>about 10 hr</p>
+            <p className='text-spotify-gray'>&nbsp;about 10 hr</p>
           </div>
         </div>
       </div>
@@ -36,13 +41,13 @@ function Playlist() {
           <Image src='/new-tab.png' alt='Renz' width={60} height={60}></Image>
           <Image src='/new-tab.png' alt='Renz' width={24} height={6}></Image>
         </div>
-        <div>
+        <div className='text-spotify-gray'>
           <div className='relative flex items-center py-2 px-5'>
             <div className='flex items-center'>
-              <p className='mr-4'>#</p>
-              <p className='mr-4'>TITLE</p>
+              <p className='mr-4 text-base'>#</p>
+              <p className='mr-4 text-xs'>TITLE</p>
             </div>
-            <div className='absolute right-[24px] flex'>
+            <div className='absolute right-[24px] flex text-xs'>
               <p className='absolute right-[2500%] whitespace-nowrap'>ALBUM</p>
               <p className='absolute right-[1250%] whitespace-nowrap'>
                 DATE ADDED
@@ -62,7 +67,7 @@ function Playlist() {
               return (
                 <li key={key} className='relative flex items-center py-2 px-5'>
                   <div className='flex items-center'>
-                    <p className='mr-4'>{key + 1}</p>
+                    <p className='mr-4 text-base'>{key + 1}</p>
                     <div className='mr-4'>
                       <Image
                         src='/new-tab.png'
@@ -72,11 +77,13 @@ function Playlist() {
                       ></Image>
                     </div>
                     <div className=''>
-                      <h1 className='text-xs'>Lemonade - Ukulele Version</h1>
+                      <p className='font-spotify-circular-light text-base text-white'>
+                        Lemonade - Ukulele Version
+                      </p>
                       <p>Jeremy Passion</p>
                     </div>
                   </div>
-                  <div className='absolute right-[24px] flex'>
+                  <div className='absolute right-[24px] flex text-sm'>
                     <p className='absolute right-[600%] whitespace-nowrap'>
                       For More than a Feeling
                     </p>

@@ -23,10 +23,6 @@ function User() {
       name: 'Projects',
       image: '/new-tab.png',
     },
-    // {
-    //   name: "Contact",
-    //   image: "/new-tab.png"
-    // },
   ];
 
   return (
@@ -46,9 +42,9 @@ function User() {
       <div className='flex gap-x-6 pt-9 pb-6'>
         <Image src='/new-tab.png' alt='Renz' width={240} height={240}></Image>
         <div className='flex flex-col justify-end'>
-          <p>PROFILE</p>
-          <h1 className=''>Renz Carillo</h1>
-          <div className='flex'>
+          <p className='font-spotify-circular-bold text-[12px]'>PROFILE</p>
+          <h1 className='text-8xl'>Renz Carillo</h1>
+          <div className='flex font-spotify-circular-light text-sm'>
             <p>1st Year CS @ DLSU-D</p>
             <p>&nbsp;• Philippines,</p>
             <p>crc1046@dlsud.edu.ph</p>
@@ -64,9 +60,9 @@ function User() {
         {/* skills section */}
         <div className=''>
           <div className='py-4'>
-            <div className='flex justify-between'>
-              <p>Skills</p>
-              <p>SEE ALL</p>
+            <div className='flex items-center justify-between font-spotify-circular-bold'>
+              <p className='text-2xl'>Skills</p>
+              <p className='text-xs text-spotify-gray'>SEE ALL</p>
             </div>
             <div className='mt-5 grid grid-cols-5 gap-x-5 gap-y-4'>
               {section.map((item, index) => {
@@ -79,10 +75,12 @@ function User() {
                       height={160}
                     ></Image>
                     <div className='py-4'>
-                      <p className=''>
+                      <p className='font-spotify-circular-bold text-base'>
                         <span>{item.name}</span>
                       </p>
-                      <p>By Spotify</p>
+                      <p className='font-spotify-circular-light text-sm text-spotify-gray'>
+                        By Spotify
+                      </p>
                     </div>
                   </div>
                 );
@@ -94,9 +92,9 @@ function User() {
         {/* projects section */}
         <div className=''>
           <div className='py-4'>
-            <div className='flex justify-between'>
-              <p>Projects</p>
-              <p>SEE ALL</p>
+            <div className='flex items-center justify-between font-spotify-circular-bold'>
+              <p className='text-2xl'>Projects</p>
+              <p className='text-xs text-spotify-gray'>SEE ALL</p>
             </div>
             <div className='mt-5 grid grid-cols-5 gap-x-5 gap-y-4'>
               {section.map((item, index) => {
@@ -109,10 +107,12 @@ function User() {
                       height={160}
                     ></Image>
                     <div className='py-4'>
-                      <p className=''>
+                      <p className='font-spotify-circular-bold text-base'>
                         <span>{item.name}</span>
                       </p>
-                      <p>By Spotify</p>
+                      <p className='font-spotify-circular-light text-sm text-spotify-gray'>
+                        By Spotify
+                      </p>
                     </div>
                   </div>
                 );
