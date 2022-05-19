@@ -5,8 +5,8 @@ function Playlist() {
   const delete_this_arr_later: number[] = [1, 2, 3, 4, 5];
 
   return (
-    <div className=''>
-      <div className='flex items-center gap-x-9 py-6'>
+    <div className='px-8'>
+      <div className='flex items-center gap-x-9  py-6'>
         <Image src='/new-tab.png' alt='Renz' width={60} height={60}></Image>
         <Image src='/new-tab.png' alt='Renz' width={24} height={6}></Image>
       </div>

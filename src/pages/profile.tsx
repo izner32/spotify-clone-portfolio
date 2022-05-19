@@ -16,10 +16,10 @@ function profile() {
     <div className='flex h-screen flex-col'>
       <div className='flex'>
         <AsideLeft></AsideLeft>
-        <div className='h-[86vh] w-full overflow-y-scroll bg-black py-6 px-8 text-white'>
+        <div className='relative h-[86vh] w-full overflow-y-scroll bg-[rgb(18,18,18)]  text-white'>
           <TopNav></TopNav>
-          <div className='mb-10 flex flex-col gap-y-10'>
-            <div className='flex gap-x-6 pt-9 pb-6'>
+          <div className='mb-10 flex flex-col  gap-y-10'>
+            <div className='flex gap-x-6 px-8 pt-9  pb-6'>
               <Image
                 src='/new-tab.png'
                 alt='Renz'
@@ -30,16 +30,16 @@ function profile() {
                 <p className='font-spotify-circular-bold text-[12px]'>
                   PROFILE
                 </p>
-                <h1 className='text-8xl'>Renz Carillo</h1>
+                <h1 className='text-7xl'>Renz Carillo</h1>
                 <div className='flex font-spotify-circular-light text-sm'>
                   <p>1st Year CS @ DLSU-D</p>
                   <p>&nbsp;• Philippines,</p>
-                  <p>crc1046@dlsud.edu.ph</p>
+                  <p>&nbsp;crc1046@dlsud.edu.ph</p>
                 </div>
               </div>
             </div>
             <div className=''>
-              <div className='flex items-center gap-x-9 py-6'>
+              <div className='flex items-center gap-x-9 px-8 py-6'>
                 <Image
                   src='/new-tab.png'
                   alt='Renz'

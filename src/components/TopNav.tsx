@@ -3,8 +3,8 @@ import React from 'react';
 
 function TopNav() {
   return (
-    <div>
-      <div className='flex justify-between  text-sm'>
+    <div className='sticky top-0 bg-[rgb(18,18,18)]'>
+      <div className='flex justify-between py-4 px-8 text-sm'>
         <div className='flex gap-x-4'>
           <Image src='/new-tab.png' alt='Renz' width={32} height={32}></Image>
           <Image src='/new-tab.png' alt='Renz' width={32} height={32}></Image>

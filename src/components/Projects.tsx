@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 function Projects(props) {
@@ -47,10 +48,17 @@ function Projects(props) {
 
   return (
     <div className=''>
-      <div className='py-4'>
+      <div className='py-4 px-8'>
         <div className='flex items-center justify-between font-spotify-circular-bold'>
           <p className='text-2xl'>Projects</p>
-          <p className='text-xs text-spotify-gray'>SEE ALL</p>
+          {props.projectsLimit ? (
+            <a className='text-xs text-spotify-gray hover:underline'>
+              <Link href='/projects' passHref>
+                {' '}
+                SEE ALL{' '}
+              </Link>
+            </a>
+          ) : null}
         </div>
         <div className='mt-5 grid grid-cols-5 gap-x-5 gap-y-4'>
           {section
@@ -60,7 +68,10 @@ function Projects(props) {
             )
             .map((item, index) => {
               return (
-                <div key={index} className='flex flex-col p-4'>
+                <div
+                  key={index}
+                  className='flex flex-col rounded bg-[rgb(24,24,24)] p-4 hover:bg-[rgb(38,38,38)]'
+                >
                   <Image
                     src={item.image}
                     alt='Renz'

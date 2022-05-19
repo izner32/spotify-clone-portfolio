@@ -28,6 +28,22 @@
   /* #endregion  /**======== Primary Color =========== */
 }
 
+::-webkit-scrollbar {
+  height: 5px;
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  /* border-radius: 20px; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.7);
+  /* border-radius: 20px; */
+}
+
 @layer base {
   /* inter var - latin */
   @font-face {

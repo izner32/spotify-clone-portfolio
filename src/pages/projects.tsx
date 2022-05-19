@@ -11,7 +11,7 @@ function projects() {
     <div>
       <div className='flex'>
         <AsideLeft></AsideLeft>
-        <div className='h-[86vh] w-full overflow-y-scroll bg-black py-6 px-8 text-white'>
+        <div className='relative h-[86vh] w-full overflow-y-scroll bg-[rgb(18,18,18)] pb-8 text-white'>
           <TopNav></TopNav>
           <Projects></Projects>
         </div>

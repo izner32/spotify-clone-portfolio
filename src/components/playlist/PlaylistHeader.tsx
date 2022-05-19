@@ -4,7 +4,7 @@ import React from 'react';
 
 function PlaylistHeader() {
   return (
-    <div className='flex gap-x-6 pt-9 pb-6'>
+    <div className='flex gap-x-6 px-8 pt-9 pb-6'>
       <Image src='/new-tab.png' alt='Renz' width={240} height={240}></Image>
       <div className='flex flex-col justify-end'>
         <p className='font-spotify-circular-bold text-[12px]'>PLAYLIST</p>

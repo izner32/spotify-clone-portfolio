@@ -3,7 +3,7 @@ import React from 'react';
 
 function Player() {
   return (
-    <div className=' absolute bottom-0 h-24 w-full bg-black p-4 text-xs text-white'>
+    <div className=' absolute bottom-0 h-24 w-full border-t-2 border-spotify-bg-light-gray bg-spotify-bg-gray p-4 text-xs text-white'>
       <div className=' flex justify-between'>
         <div className='flex h-14 w-96 items-center justify-center gap-x-1.5'>
           <Image src='/new-tab.png' alt='Renz' width={56} height={56}></Image>
