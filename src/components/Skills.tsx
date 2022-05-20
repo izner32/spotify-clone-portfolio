@@ -2,7 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-function Skills(props) {
+interface Props {
+  skillsLimit: number;
+}
+
+function Skills(props: Props) {
   const section: { name: string; image: string }[] = [
     {
       name: 'My Playlist #1',
@@ -54,8 +58,7 @@ function Skills(props) {
           {props.skillsLimit ? (
             <a className='text-xs text-spotify-gray hover:underline'>
               <Link href='/skills' passHref>
-                {' '}
-                SEE ALL{' '}
+                SEE ALL
               </Link>
             </a>
           ) : null}
