@@ -11,9 +11,9 @@ function projects() {
     <div>
       <div className='flex'>
         <AsideLeft></AsideLeft>
-        <div className='relative h-[86vh] w-full overflow-y-scroll bg-[rgb(18,18,18)] pb-8 text-white'>
+        <div className='relative h-[86.5vh] w-full overflow-y-scroll bg-[rgb(18,18,18)] pb-8 text-white'>
           <TopNav></TopNav>
-          <Projects></Projects>
+          <Projects projectsLimit={0}></Projects>
         </div>
         <AsideRight></AsideRight>
       </div>

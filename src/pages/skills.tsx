@@ -11,9 +11,9 @@ function skills() {
     <div>
       <div className='flex'>
         <AsideLeft></AsideLeft>
-        <div className='relative h-[86vh] w-full overflow-y-scroll bg-[rgb(18,18,18)] pb-8 text-white'>
+        <div className='relative h-[86.5vh] w-full overflow-y-scroll bg-[rgb(18,18,18)] pb-8 text-white'>
           <TopNav></TopNav>
-          <Skills></Skills>
+          <Skills skillsLimit={0}></Skills>
         </div>
         <AsideRight></AsideRight>
       </div>

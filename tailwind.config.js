@@ -28,7 +28,7 @@ module.exports = {
 
       },
       colors: {
-        'spotify-gray': '#C6C6C6',
+        'spotify-gray': '#B3B3B3',
         'spotify-bg-gray': '#181818',
         'spotify-bg-light-gray': '#202020',
         primary: {
@@ -72,6 +72,9 @@ module.exports = {
         shimmer: 'shimmer 1.3s linear infinite',
       },
     },
+  },
+  variants: {
+    fill: ['hover', 'focus'], // this line does the trick
   },
   plugins: [require('@tailwindcss/forms')],
 };

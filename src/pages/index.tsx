@@ -29,7 +29,7 @@ export default function HomePage() {
       <div className='flex h-screen flex-col'>
         <div className='flex'>
           <AsideLeft></AsideLeft>
-          <div className='relative h-[86vh] w-full overflow-y-scroll bg-[rgb(18,18,18)] text-white'>
+          <div className='relative h-[86.5vh] w-full overflow-y-scroll bg-[rgb(18,18,18)] text-white'>
             <TopNav></TopNav>
             <div className='mb-10 flex flex-col gap-y-10'>
               <Sections></Sections>
