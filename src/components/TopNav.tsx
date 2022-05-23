@@ -5,7 +5,7 @@ function TopNav() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className='sticky top-0 bg-[rgb(18,18,18)]'>
+    <div className='sticky top-0 z-10 bg-[rgb(18,18,18)]'>
       <div className='flex justify-between py-4 px-8 text-sm'>
         <div className='flex gap-x-4'>
           <button className='flex items-center justify-center rounded-full bg-[rgba(0,0,0,.7)] p-[6px]'>

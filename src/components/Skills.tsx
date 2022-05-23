@@ -7,46 +7,91 @@ interface Props {
 }
 
 function Skills(props: Props) {
-  const section: { name: string; image: string }[] = [
+  const section: { title: string; 'sub-title': string; image: string }[] = [
     {
-      name: 'My Playlist #1',
-      image: '/new-tab.png',
+      title: 'HTML',
+      'sub-title': '',
+      image: '/images/skills/html.png',
     },
     {
-      name: 'My Playlist #2',
-      image: '/new-tab.png',
+      title: 'CSS',
+      'sub-title': '',
+      image: '/images/skills/css.png',
     },
     {
-      name: 'Profile',
-      image: '/new-tab.png',
+      title: 'Javascript',
+      'sub-title': '',
+      image: '/images/skills/javascript.png',
     },
     {
-      name: 'Skills',
-      image: '/new-tab.png',
+      title: 'Typescript',
+      'sub-title': '',
+      image: '/images/skills/typescript.png',
     },
     {
-      name: 'Projects',
-      image: '/new-tab.png',
+      title: 'MQL4',
+      'sub-title': "i couldn't find a square logo :(",
+      image: '/images/skills/mt4.png',
     },
     {
-      name: 'My Playlist #1',
-      image: '/new-tab.png',
+      title: 'MQL5',
+      'sub-title': '',
+      image: '/images/skills/mql5.png',
     },
     {
-      name: 'My Playlist #2',
-      image: '/new-tab.png',
+      title: 'Python',
+      'sub-title': '',
+      image: '/images/skills/python.png',
     },
     {
-      name: 'Profile',
-      image: '/new-tab.png',
+      title: 'Java',
+      'sub-title': '',
+      image: '/images/skills/java.png',
     },
     {
-      name: 'Skills',
-      image: '/new-tab.png',
+      title: 'C++',
+      'sub-title': '',
+      image: '/images/skills/c++.png',
     },
     {
-      name: 'Projects',
-      image: '/new-tab.png',
+      title: 'Solidity',
+      'sub-title': '',
+      image: '/images/skills/solidity.png',
+    },
+    {
+      title: 'MongoDB',
+      'sub-title': '',
+      image: '/images/skills/mongodb.png',
+    },
+    {
+      title: 'PostgreSQL',
+      'sub-title': '',
+      image: '/images/skills/postgresql.png',
+    },
+    {
+      title: 'NodeJS',
+      'sub-title': '',
+      image: '/images/skills/nodejs.png',
+    },
+    {
+      title: 'NextJS',
+      'sub-title': '',
+      image: '/images/skills/nextjs.png',
+    },
+    {
+      title: 'TailwindCSS',
+      'sub-title': '',
+      image: '/images/skills/tailwindcss.png',
+    },
+    {
+      title: 'Pandas',
+      'sub-title': '',
+      image: '/images/skills/pandas.png',
+    },
+    {
+      title: 'Git',
+      'sub-title': '',
+      image: '/images/skills/git.png',
     },
   ];
 
@@ -72,18 +117,24 @@ function Skills(props: Props) {
                   key={index}
                   className='flex flex-col rounded  bg-[rgb(24,24,24)] p-4 hover:bg-[rgb(38,38,38)]'
                 >
-                  <Image
-                    src={item.image}
-                    alt='Renz'
-                    width={160}
-                    height={160}
-                  ></Image>
-                  <div className='py-4'>
-                    <p className='font-spotify-circular-bold text-base'>
-                      <span>{item.name}</span>
+                  <div className='flex justify-center overflow-hidden rounded-md'>
+                    <div className=' relative h-40 w-full'>
+                      <Image
+                        src={item.image}
+                        alt='Renz'
+                        layout='fill'
+                        objectFit='cover'
+                      ></Image>
+                    </div>
+                  </div>
+                  <div className='pt-4'>
+                    <p className='h-[27px] font-spotify-circular-bold text-base'>
+                      <span>{item.title}</span>
                     </p>
-                    <p className='font-spotify-circular-light text-sm text-spotify-gray'>
-                      By Spotify
+                    <p className='h-8 font-spotify-circular-light text-sm text-spotify-gray'>
+                      {item['sub-title']
+                        ? item['sub-title']
+                        : 'By Renz Carillo'}
                     </p>
                   </div>
                 </div>

@@ -11,7 +11,13 @@ function profile() {
   return (
     <div className='mb-10 flex flex-col  gap-y-10'>
       <div className='flex gap-x-6 px-8 pt-9  pb-6'>
-        <Image src='/new-tab.png' alt='Renz' width={240} height={240}></Image>
+        <Image
+          src='/images/renz.png'
+          alt='Renz'
+          width={240}
+          height={240}
+          objectFit='cover'
+        ></Image>
         <div className='flex flex-col justify-end'>
           <p className='font-spotify-circular-bold text-[12px]'>PROFILE</p>
           <h1 className='text-7xl'>Renz Carillo</h1>
