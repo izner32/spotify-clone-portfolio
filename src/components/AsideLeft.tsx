@@ -33,7 +33,7 @@ function AsideLeft() {
       defaultSize={{
         width:
           typeof window !== 'undefined'
-            ? Number(localStorage.getItem('handlerSize'))
+            ? Number(localStorage.getItem('leftHandlerSize'))
             : 200,
         height: 200,
       }}
@@ -53,8 +53,8 @@ function AsideLeft() {
       }}
       onResizeStop={(_e, _direction, _ref, data) => {
         const currentSize =
-          Number(localStorage.getItem('handlerSize')) + data.width;
-        localStorage.setItem('handlerSize', currentSize.toString());
+          Number(localStorage.getItem('leftHandlerSize')) + data.width;
+        localStorage.setItem('leftHandlerSize', currentSize.toString());
       }}
       className='relative truncate bg-black text-sm  text-spotify-gray'
     >

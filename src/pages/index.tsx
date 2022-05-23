@@ -1,12 +1,8 @@
 import * as React from 'react';
 
-import AsideLeft from '@/components/AsideLeft';
-import AsideRight from '@/components/AsideRight';
 import Sections from '@/components/index/Sections';
-import Player from '@/components/Player';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
-import TopNav from '@/components/TopNav';
 
 /**
  * SVGR Support
@@ -26,20 +22,10 @@ export default function HomePage() {
 
   return (
     <>
-      <div className='flex h-screen flex-col'>
-        <div className='flex'>
-          <AsideLeft></AsideLeft>
-          <div className='relative h-[86.5vh] w-full overflow-y-scroll bg-[rgb(18,18,18)] text-white'>
-            <TopNav></TopNav>
-            <div className='mb-10 flex flex-col gap-y-10'>
-              <Sections></Sections>
-              <Skills skillsLimit={skillsLimit}></Skills>
-              <Projects projectsLimit={projectsLimit}></Projects>
-            </div>
-          </div>
-          <AsideRight></AsideRight>
-        </div>
-        <Player></Player>
+      <div className='mb-10 flex flex-col gap-y-10'>
+        <Sections></Sections>
+        <Skills skillsLimit={skillsLimit}></Skills>
+        <Projects projectsLimit={projectsLimit}></Projects>
       </div>
     </>
   );
