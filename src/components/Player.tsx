@@ -32,46 +32,39 @@ function Player() {
         </div>
 
         <div className='flex w-[33rem] flex-col'>
-          <ul className='flex items-center justify-center'>
-            <li>
-              <Image
-                src='/svg/shuffle.svg'
-                alt='Shuffle'
-                width={32}
-                height={32}
-              ></Image>
+          <ul className='flex items-center justify-center gap-x-[6px]'>
+            <li className='p-[9.5px]'>
+              <div className='relative h-[14px] w-[14px]'>
+                <Image
+                  src='/svg/shuffle.svg'
+                  alt='Shuffle'
+                  layout='fill'
+                ></Image>
+              </div>
             </li>
-            <li>
-              <Image
-                src='/svg/previous.svg'
-                alt='Previous'
-                width={32}
-                height={32}
-              ></Image>
+            <li className='p-[9.5px]'>
+              <div className='relative h-[14px] w-[14px]'>
+                <Image
+                  src='/svg/previous.svg'
+                  alt='Previous'
+                  layout='fill'
+                ></Image>
+              </div>
             </li>
-            <li>
-              <Image
-                src='/svg/play.svg'
-                alt='Play'
-                width={32}
-                height={32}
-              ></Image>
+            <li className='rounded-full bg-white p-[9.5px]'>
+              <div className='relative h-[14px] w-[14px]'>
+                <Image src='/svg/play.svg' alt='Play' layout='fill'></Image>
+              </div>
             </li>
-            <li>
-              <Image
-                src='/svg/next.svg'
-                alt='Next'
-                width={32}
-                height={32}
-              ></Image>
+            <li className='p-[9.5px]'>
+              <div className='relative h-[14px] w-[14px]'>
+                <Image src='/svg/next.svg' alt='Next' layout='fill'></Image>
+              </div>
             </li>
-            <li>
-              <Image
-                src='/svg/repeat.svg'
-                alt='Repeat'
-                width={32}
-                height={32}
-              ></Image>
+            <li className='p-[9.5px]'>
+              <div className='relative h-[14px] w-[14px]'>
+                <Image src='/svg/repeat.svg' alt='Repeat' layout='fill'></Image>
+              </div>
             </li>
           </ul>
           <div className='flex text-[11px]'>
@@ -83,53 +76,51 @@ function Player() {
 
         <div className='flex w-96 items-center justify-end'>
           <ul className='flex'>
-            <li>
-              <Image
-                src='/svg/mic.svg'
-                alt='Lyrics'
-                width={32}
-                height={32}
-              ></Image>
+            <li className='p-[8.5px]'>
+              <div className='relative h-[16px] w-[16px]'>
+                <Image
+                  src='/svg/mic.svg'
+                  alt='Microphone'
+                  layout='fill'
+                ></Image>
+              </div>
             </li>
-            <li>
-              <Image
-                src='/svg/queue.svg'
-                alt='Queue'
-                width={32}
-                height={32}
-              ></Image>
+            <li className='p-[8.5px]'>
+              <div className='relative h-[16px] w-[16px]'>
+                <Image src='/svg/queue.svg' alt='Queue' layout='fill'></Image>
+              </div>
             </li>
-            <li>
-              <Image
-                src='/svg/connect-device.svg'
-                alt='Connect Device'
-                width={32}
-                height={32}
-              ></Image>
+            <li className='p-[8.5px]'>
+              <div className='relative h-[16px] w-[16px]'>
+                <Image
+                  src='/svg/connect-device.svg'
+                  alt='Connect Device'
+                  layout='fill'
+                ></Image>
+              </div>
             </li>
-            <li>
-              <Image
-                src='/svg/mute.svg'
-                alt='Mute'
-                width={32}
-                height={32}
-              ></Image>
+            <li className='p-[8.5px]'>
+              <div className='relative h-[16px] w-[16px]'>
+                <Image src='/svg/mute.svg' alt='Mute' layout='fill'></Image>
+              </div>
             </li>
-            <li>
-              <Image
-                src='/new-tab.png'
-                alt='Renz'
-                width={90}
-                height={32}
-              ></Image>
+            <li className=''>
+              <div className='relative h-[32px] w-[90px]'>
+                <Image
+                  src='/svg/full-scree.svg'
+                  alt='Sound'
+                  layout='fill'
+                ></Image>
+              </div>
             </li>
-            <li>
-              <Image
-                src='/svg/full-screen.svg'
-                alt='Full Screen'
-                width={32}
-                height={32}
-              ></Image>
+            <li className='p-[8.5px]'>
+              <div className='relative h-[16px] w-[16px]'>
+                <Image
+                  src='/svg/full-screen.svg'
+                  alt='Full Screen'
+                  layout='fill'
+                ></Image>
+              </div>
             </li>
           </ul>
         </div>
