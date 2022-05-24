@@ -30,8 +30,8 @@ function Skills(props: Props) {
     },
     {
       title: 'MQL4',
-      'sub-title': "i couldn't find a square logo :(",
-      image: '/images/skills/mt4.png',
+      'sub-title': '',
+      image: '/images/skills/mql4.png',
     },
     {
       title: 'MQL5',

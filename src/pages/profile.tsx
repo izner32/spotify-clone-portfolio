@@ -1,12 +1,14 @@
 import Image from 'next/image';
 import React from 'react';
 
+import Certifications from '@/components/Certifications';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 
 function profile() {
   const skillsLimit = 5;
   const projectsLimit = 5;
+  const certificationsLimit = 5;
 
   return (
     <div className='mb-10 flex flex-col  gap-y-10'>
@@ -34,6 +36,9 @@ function profile() {
         </div>
         <Skills skillsLimit={skillsLimit}></Skills>
         <Projects projectsLimit={projectsLimit}></Projects>
+        <Certifications
+          certificationsLimit={certificationsLimit}
+        ></Certifications>
       </div>
     </div>
   );

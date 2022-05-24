@@ -248,6 +248,19 @@ function AsideLeft() {
                 </a>
               </Link>
             </li>
+            <li
+              className={`py-[5px] hover:text-white ${
+                router.pathname == '/projects' ? 'text-white' : ''
+              }`}
+            >
+              <Link href='/certifications' passHref>
+                <a>
+                  <p>
+                    <span>Certifications</span>
+                  </p>
+                </a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div className='relative -bottom-3 h-10 items-center px-6 font-spotify-circular-bold hover:text-white '>

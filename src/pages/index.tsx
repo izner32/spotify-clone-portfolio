@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import Certifications from '@/components/Certifications';
 import Sections from '@/components/index/Sections';
 import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
@@ -19,6 +20,7 @@ import Skills from '@/components/Skills';
 export default function HomePage() {
   const skillsLimit = 5;
   const projectsLimit = 5;
+  const certificationsLimit = 5;
 
   return (
     <>
@@ -26,6 +28,9 @@ export default function HomePage() {
         <Sections></Sections>
         <Skills skillsLimit={skillsLimit}></Skills>
         <Projects projectsLimit={projectsLimit}></Projects>
+        <Certifications
+          certificationsLimit={certificationsLimit}
+        ></Certifications>
       </div>
     </>
   );
