@@ -29,11 +29,6 @@ function Skills(props: Props) {
       image: '/images/skills/typescript.png',
     },
     {
-      title: 'MQL4',
-      'sub-title': '',
-      image: '/images/skills/mql4.png',
-    },
-    {
       title: 'MQL5',
       'sub-title': '',
       image: '/images/skills/mql5.png',
@@ -47,11 +42,6 @@ function Skills(props: Props) {
       title: 'Java',
       'sub-title': '',
       image: '/images/skills/java.png',
-    },
-    {
-      title: 'C++',
-      'sub-title': '',
-      image: '/images/skills/c++.png',
     },
     {
       title: 'Solidity',
@@ -115,7 +105,7 @@ function Skills(props: Props) {
               return (
                 <div
                   key={index}
-                  className='flex flex-col rounded  bg-[rgb(24,24,24)] p-4 hover:bg-[rgb(38,38,38)]'
+                  className='flex cursor-not-allowed flex-col  rounded bg-[rgb(24,24,24)] p-4 hover:bg-[rgb(38,38,38)]'
                 >
                   <div className='flex justify-center overflow-hidden rounded-md'>
                     <div className=' relative h-40 w-full'>

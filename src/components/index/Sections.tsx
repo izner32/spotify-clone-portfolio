@@ -23,6 +23,10 @@ function sections() {
       name: 'Projects',
       image: '/new-tab.png',
     },
+    {
+      name: 'Certifications',
+      image: '/new-tab.png',
+    },
   ];
 
   return (

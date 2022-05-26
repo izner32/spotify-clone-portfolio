@@ -76,5 +76,5 @@ module.exports = {
   variants: {
     fill: ['hover', 'focus'], // this line does the trick
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/line-clamp'),],
 };

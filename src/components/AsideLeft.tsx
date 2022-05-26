@@ -250,7 +250,7 @@ function AsideLeft() {
             </li>
             <li
               className={`py-[5px] hover:text-white ${
-                router.pathname == '/projects' ? 'text-white' : ''
+                router.pathname == '/certifications' ? 'text-white' : ''
               }`}
             >
               <Link href='/certifications' passHref>
