@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 
-import ProjectModal from '@/components/ProjectModal';
+import ProjectModal from '@/components/projects/ProjectModal';
 
 interface Props {
   projectsLimit: number;

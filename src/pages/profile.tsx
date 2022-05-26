@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
 
-import Certifications from '@/components/Certifications';
-import Projects from '@/components/Projects';
+import Certifications from '@/components/certifications/Certifications';
+import Projects from '@/components/projects/Projects';
 import Skills from '@/components/Skills';
 
 function profile() {

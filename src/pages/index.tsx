@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import Certifications from '@/components/Certifications';
+import Certifications from '@/components/certifications/Certifications';
 import Sections from '@/components/index/Sections';
-import Projects from '@/components/Projects';
+import Projects from '@/components/projects/Projects';
 import Skills from '@/components/Skills';
 
 /**
