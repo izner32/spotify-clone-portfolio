@@ -3,7 +3,7 @@ import React from 'react';
 import Playlist from '@/components/playlist/Playlist';
 import PlaylistHeader from '@/components/playlist/PlaylistHeader';
 
-function second() {
+function Second() {
   return (
     <>
       <PlaylistHeader></PlaylistHeader>
@@ -12,4 +12,4 @@ function second() {
   );
 }
 
-export default second;
+export default Second;

@@ -1,9 +1,11 @@
 import * as React from 'react';
 
-import Certifications from '@/components/certifications/Certifications';
+import useCertifications from '@/hooks/useCertifications';
+import useProjects from '@/hooks/useProjects';
+import useSkills from '@/hooks/useSkills';
+
+import Cards from '@/components/Cards';
 import Sections from '@/components/index/Sections';
-import Projects from '@/components/projects/Projects';
-import Skills from '@/components/Skills';
 
 /**
  * SVGR Support
@@ -18,19 +20,26 @@ import Skills from '@/components/Skills';
 // to customize the default configuration.
 
 export default function HomePage() {
-  const skillsLimit = 5;
-  const projectsLimit = 5;
-  const certificationsLimit = 5;
+  const cardLimit = 5;
+  const skillsData = useSkills();
+  const projectsData = useProjects();
+  const certificationsData = useCertifications();
 
   return (
     <>
       <div className='mb-10 flex flex-col gap-y-10'>
         <Sections></Sections>
-        <Skills skillsLimit={skillsLimit}></Skills>
-        <Projects projectsLimit={projectsLimit}></Projects>
-        <Certifications
-          certificationsLimit={certificationsLimit}
-        ></Certifications>
+        <Cards cardsLimit={cardLimit} data={skillsData} type='Skills'></Cards>
+        <Cards
+          cardsLimit={cardLimit}
+          data={projectsData}
+          type='Projects'
+        ></Cards>
+        <Cards
+          cardsLimit={cardLimit}
+          data={certificationsData}
+          type='Certifications'
+        ></Cards>
       </div>
     </>
   );

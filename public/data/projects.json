@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Cyber Outlaws",
+    "sub-title": "Full stack web3 application with log in metamask feature",
+    "tools": ["NextJS", "NodeJS", "MongoDB", "TailwindCSS"],
+    "cover-image": "/images/projects/cyber-outlaws.png",
+    "card-image": "/images/projects/cyber-outlaws.png",
+    "card-link": "https://cyberoutlaws.world"
+  },
+  {
+    "title": "Mint Smart Contract",
+    "sub-title": "Allowed minting for the creation of thousands of NFTs",
+    "tools": ["Solidity"],
+    "cover-image":"/images/projects/smart-contract.png",
+    "card-image":"/images/projects/smart-contract.png",
+    "card-link":"https://polygonscan.com/address/0xe15dd32f646d505f89c94df0d62d18e975637836#code"
+  },
+  {
+    "title": "Analytics Engineering on Scraped Top Pharmacies",
+    "sub-title": "Performed data transformation and cleaning for different scraped data then geocoded the seized address",
+    "tools": [
+      "BeautifulSoup4",
+      "GeoPy",
+      "Numpy",
+      "Pandas",
+      "PySpark",
+      "Python",
+      "Selenium"
+    ],
+    "cover-image": "/images/projects/pharmacy-scraper.png",
+    "card-image": "/images/projects/pharmacy-scraper.png",
+    "card-link": "https://github.com/izner32/pharmacy_data_scraper"
+  },
+  {
+    "title": "Algorithmic Trading Bot",
+    "sub-title": "Mean reversion system that triggers a buy/sell dependent on the customized candlestick patterns and multiple trading indicators incorporated",
+    "tools": ["MQL5"],
+    "cover-image": "/images/projects/algo-bot.png",
+    "card-image": "/images/projects/algo-bot.png",
+    "card-link": "https://github.com/izner32/MQL5"
+  },
+  {
+    "title": "Covid Data Pipeline",
+    "sub-title":"Architected and built a data pipeline utilizing aws services",
+    "tools": [
+      "AWS - Glue",
+      "AWS - S3",
+      "AWS - Redshift",
+      "Apache Airflow",
+      "Python"
+    ],
+    "cover-image": "/images/projects/covid-data-pipeline.png",
+    "card-image": "/images/projects/covid-data-pipeline.png",
+    "card-link": "https://github.com/izner32/covid-19-de"
+  },
+  {
+    "title": "Spotify Clone",
+    "sub-title": "Portfolio website",
+    "tools": ["NextJS", "TailwindCSS", "Typescript"],
+    "cover-image": "/images/projects/spotify-clone.png",
+    "card-image": "/images/projects/spotify-clone.png",
+    "card-link": "https://github.com/izner32/spotify-clone-portfolio"
+  },
+  {
+    "title": "LinkedIn Scraper",
+    "sub-title": "Scraped user and their public info based on a keyword",
+    "tools": ["BeautifulSoup4", "Python", "Selenium"],
+    "cover-image": "/images/projects/linkedin-scraper.png",
+    "card-image": "/images/projects/linkedin-scraper.png",
+    "card-link": "https://github.com/izner32/linkedin_scraper"
+  }
+]

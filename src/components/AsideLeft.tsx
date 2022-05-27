@@ -185,10 +185,10 @@ function AsideLeft() {
           <ul className=''>
             <li
               className={`py-[5px] hover:text-white ${
-                router.pathname == '/playlist/first' ? 'text-white' : ''
+                router.pathname == '/playlist/First' ? 'text-white' : ''
               }`}
             >
-              <Link href='/playlist/first' passHref>
+              <Link href='/playlist/First' passHref>
                 <a>
                   <p>
                     <span>My Playlist #1</span>
@@ -198,10 +198,10 @@ function AsideLeft() {
             </li>
             <li
               className={`py-[5px] hover:text-white ${
-                router.pathname == '/playlist/second' ? 'text-white' : ''
+                router.pathname == '/playlist/Second' ? 'text-white' : ''
               }`}
             >
-              <Link href='/playlist/second' passHref>
+              <Link href='/playlist/Second' passHref>
                 <a>
                   <p>
                     <span>My Playlist #2</span>
@@ -211,10 +211,10 @@ function AsideLeft() {
             </li>
             <li
               className={`py-[5px] hover:text-white ${
-                router.pathname == '/profile' ? 'text-white' : ''
+                router.pathname == '/Profile' ? 'text-white' : ''
               }`}
             >
-              <Link href='/profile' passHref>
+              <Link href='/Profile' passHref>
                 <a>
                   <p>
                     <span>Profile</span>
@@ -224,10 +224,10 @@ function AsideLeft() {
             </li>
             <li
               className={`py-[5px] hover:text-white ${
-                router.pathname == '/skills' ? 'text-white' : ''
+                router.pathname == '/Skills' ? 'text-white' : ''
               }`}
             >
-              <Link href='/skills' passHref>
+              <Link href='/Skills' passHref>
                 <a>
                   <p>
                     <span>Skills</span>
@@ -237,10 +237,10 @@ function AsideLeft() {
             </li>
             <li
               className={`py-[5px] hover:text-white ${
-                router.pathname == '/projects' ? 'text-white' : ''
+                router.pathname == '/Projects' ? 'text-white' : ''
               }`}
             >
-              <Link href='/projects' passHref>
+              <Link href='/Projects' passHref>
                 <a>
                   <p>
                     <span>Projects</span>
@@ -250,10 +250,10 @@ function AsideLeft() {
             </li>
             <li
               className={`py-[5px] hover:text-white ${
-                router.pathname == '/certifications' ? 'text-white' : ''
+                router.pathname == '/Certifications' ? 'text-white' : ''
               }`}
             >
-              <Link href='/certifications' passHref>
+              <Link href='/Certifications' passHref>
                 <a>
                   <p>
                     <span>Certifications</span>

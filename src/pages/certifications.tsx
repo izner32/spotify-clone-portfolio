@@ -1,9 +1,16 @@
-import React from 'react';
+import useCertifications from '@/hooks/useCertifications';
 
-import Certifications from '@/components/certifications/Certifications';
+import Cards from '@/components/Cards';
 
-function skills() {
-  return <Certifications certificationsLimit={0}></Certifications>;
+function Certifications() {
+  const certificationsData = useCertifications();
+  return (
+    <Cards
+      cardsLimit={0}
+      data={certificationsData}
+      type='Certifications'
+    ></Cards>
+  );
 }
 
-export default skills;
+export default Certifications;

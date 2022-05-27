@@ -1,9 +1,10 @@
-import React from 'react';
+import useProjects from '@/hooks/useProjects';
 
-import Projects from '@/components/projects/Projects';
+import Cards from '@/components/Cards';
 
-function projects() {
-  return <Projects projectsLimit={0}></Projects>;
+function Projects() {
+  const projectsData = useProjects();
+  return <Cards cardsLimit={0} data={projectsData} type='Projects'></Cards>;
 }
 
-export default projects;
+export default Projects;

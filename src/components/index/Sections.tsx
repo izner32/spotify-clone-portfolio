@@ -54,7 +54,7 @@ function sections() {
         {section.map((item, index) => {
           return (
             <Link href={item.link} key={index} passHref>
-              <div className='flex cursor-pointer rounded bg-[rgb(40,40,40)] hover:bg-[rgb(65,65,65)]'>
+              <div className='flex cursor-pointer gap-x-4 rounded bg-[rgb(40,40,40)] hover:bg-[rgb(65,65,65)]'>
                 <div className='relative h-20 w-20'>
                   <Image
                     src={item.coverImage}

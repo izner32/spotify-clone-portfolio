@@ -1,9 +1,10 @@
-import React from 'react';
+import useSkills from '@/hooks/useSkills';
 
-import Skills from '@/components/Skills';
+import Cards from '@/components/Cards';
 
-function skills() {
-  return <Skills skillsLimit={0}></Skills>;
+function Skills() {
+  const skillsData = useSkills();
+  return <Cards cardsLimit={0} data={skillsData} type='Skills'></Cards>;
 }
 
-export default skills;
+export default Skills;

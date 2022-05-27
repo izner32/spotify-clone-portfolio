@@ -1,0 +1,122 @@
+[
+  {
+    "title": "HTML",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/html.png",
+    "card-image": "/images/skills/html.png",
+    "card-link": ""
+  },
+  {
+    "title": "CSS",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/css.png",
+    "card-image": "/images/skills/css.png",
+    "card-link": ""
+  },
+  {
+    "title": "Javascript",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/javascript.png",
+    "card-image": "/images/skills/javascript.png",
+    "card-link": ""
+  },
+  {
+    "title": "Typescript",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/typescript.png",
+    "card-image": "/images/skills/typescript.png",
+    "card-link": ""
+  },
+  {
+    "title": "MQL5",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/mql5.png",
+    "card-image": "/images/skills/mql5.png",
+    "card-link": ""
+  },
+  {
+    "title": "Python",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/python.png",
+    "card-image": "/images/skills/python.png",
+    "card-link": ""
+  },
+  {
+    "title": "Java",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/java.png",
+    "card-image": "/images/skills/java.png",
+    "card-link": ""
+  },
+  {
+    "title": "Solidity",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/solidity.png",
+    "card-image": "/images/skills/solidity.png",
+    "card-link": ""
+  },
+  {
+    "title": "MongoDB",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/mongodb.png",
+    "card-image": "/images/skills/mongodb.png",
+    "card-link": ""
+  },
+  {
+    "title": "PostgreSQL",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/postgresql.png",
+    "card-image": "/images/skills/postgresql.png",
+    "card-link": ""
+  },
+  {
+    "title": "NodeJS",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/nodejs.png",
+    "card-image": "/images/skills/nodejs.png",
+    "card-link": ""
+  },
+  {
+    "title": "NextJS",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/nextjs.png",
+    "card-image": "/images/skills/nextjs.png",
+    "card-link": ""
+  },
+  {
+    "title": "TailwindCSS",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/tailwindcss.png",
+    "card-image": "/images/skills/tailwindcss.png",
+    "card-link": ""
+  },
+  {
+    "title": "Pandas",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/pandas.png",
+    "card-image": "/images/skills/pandas.png",
+    "card-link": ""
+  },
+  {
+    "title": "Git",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/git.png",
+    "card-image": "/images/skills/git.png",
+    "card-link": ""
+  }
+]

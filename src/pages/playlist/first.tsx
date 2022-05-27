@@ -3,7 +3,7 @@ import React from 'react';
 import Playlist from '@/components/playlist/Playlist';
 import PlaylistHeader from '@/components/playlist/PlaylistHeader';
 
-function first() {
+function First() {
   return (
     <>
       <PlaylistHeader></PlaylistHeader>
@@ -12,4 +12,4 @@ function first() {
   );
 }
 
-export default first;
+export default First;

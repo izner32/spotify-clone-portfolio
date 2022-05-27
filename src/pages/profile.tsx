@@ -1,14 +1,17 @@
 import Image from 'next/image';
 import React from 'react';
 
-import Certifications from '@/components/certifications/Certifications';
-import Projects from '@/components/projects/Projects';
-import Skills from '@/components/Skills';
+import useCertifications from '@/hooks/useCertifications';
+import useProjects from '@/hooks/useProjects';
+import useSkills from '@/hooks/useSkills';
 
-function profile() {
-  const skillsLimit = 5;
-  const projectsLimit = 5;
-  const certificationsLimit = 5;
+import Cards from '@/components/Cards';
+
+function Profile() {
+  const cardLimit = 5;
+  const skillsData = useSkills();
+  const projectsData = useProjects();
+  const certificationsData = useCertifications();
 
   return (
     <div className='mb-10 flex flex-col  gap-y-10'>
@@ -34,14 +37,20 @@ function profile() {
         <div className='flex items-center gap-x-9 px-8 py-6'>
           <Image src='/new-tab.png' alt='Renz' width={24} height={6}></Image>
         </div>
-        <Skills skillsLimit={skillsLimit}></Skills>
-        <Projects projectsLimit={projectsLimit}></Projects>
-        <Certifications
-          certificationsLimit={certificationsLimit}
-        ></Certifications>
+        <Cards cardsLimit={cardLimit} data={skillsData} type='Skills'></Cards>
+        <Cards
+          cardsLimit={cardLimit}
+          data={projectsData}
+          type='Projects'
+        ></Cards>
+        <Cards
+          cardsLimit={cardLimit}
+          data={certificationsData}
+          type='Certifications'
+        ></Cards>
       </div>
     </div>
   );
 }
 
-export default profile;
+export default Profile;
