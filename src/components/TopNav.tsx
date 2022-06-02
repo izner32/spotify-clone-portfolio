@@ -8,7 +8,7 @@ function TopNav() {
     <div className='sticky top-0 z-10 bg-[rgb(18,18,18)]'>
       <div className='flex justify-between py-4 px-8 text-sm'>
         <div className='flex gap-x-4'>
-          <button className='flex items-center justify-center rounded-full bg-[rgba(0,0,0,.7)] p-[6px]'>
+          <button className='flex cursor-not-allowed items-center justify-center rounded-full bg-[rgba(0,0,0,.7)] p-[6px]'>
             <div className='relative h-6 w-6'>
               <Image
                 src='/svg/back-topnav.svg'
@@ -17,7 +17,7 @@ function TopNav() {
               ></Image>
             </div>
           </button>
-          <button className='flex items-center justify-center rounded-full bg-[rgba(0,0,0,.7)] p-[6px]'>
+          <button className='flex cursor-not-allowed items-center justify-center rounded-full bg-[rgba(0,0,0,.7)] p-[6px]'>
             <div className='relative h-6 w-6 opacity-70'>
               <Image
                 src='/svg/next-topnav.svg'

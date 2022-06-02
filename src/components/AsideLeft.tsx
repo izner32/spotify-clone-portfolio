@@ -1,11 +1,24 @@
+/* eslint-disable no-console */
+import Cookie from 'js-cookie';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Resizable } from 're-resizable';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-function AsideLeft() {
+const AsideLeft: React.FC<{ initialAsideLeftHandler: string }> = ({
+  initialAsideLeftHandler,
+}) => {
   const router = useRouter();
+  const [asideLeftHandler, setAsideLeftHandler] = useState(
+    JSON.parse(initialAsideLeftHandler)
+  );
+
+  useEffect(() => {
+    Cookie.set('asideLeftHandler', JSON.stringify(asideLeftHandler), {
+      expires: 7,
+    });
+  }, [asideLeftHandler]);
 
   // changing image on hover
   const [isHomeHovering, setIsHomeHovered] = useState(false);
@@ -30,15 +43,8 @@ function AsideLeft() {
 
   return (
     <Resizable
-      defaultSize={{
-        width:
-          typeof window !== 'undefined'
-            ? Number(localStorage.getItem('leftHandlerSize'))
-            : 200,
-        height: 200,
-      }}
       minHeight='100vh'
-      minWidth={175}
+      minWidth={200}
       maxWidth={320}
       enable={{
         right: true,
@@ -51,12 +57,16 @@ function AsideLeft() {
           right: 0,
         },
       }}
-      onResizeStop={(_e, _direction, _ref, data) => {
-        const currentSize =
-          Number(localStorage.getItem('leftHandlerSize')) + data.width;
-        localStorage.setItem('leftHandlerSize', currentSize.toString());
+      size={{ width: asideLeftHandler.width, height: asideLeftHandler.height }}
+      onResizeStop={(e, direction, ref) => {
+        setAsideLeftHandler({
+          width: parseInt(ref.style.width),
+          height: parseInt(ref.style.height),
+          x: 0,
+          y: 0,
+        });
       }}
-      className='relative truncate bg-black text-sm  text-spotify-gray'
+      className={`relative truncate bg-black text-sm  text-spotify-gray `}
     >
       <div>
         <div className='mt-[23px] w-auto pb-1 pl-6'>
@@ -279,6 +289,6 @@ function AsideLeft() {
       </div>
     </Resizable>
   );
-}
+};
 
 export default AsideLeft;

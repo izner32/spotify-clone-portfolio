@@ -15,28 +15,38 @@ function Profile() {
 
   return (
     <div className='mb-10 flex flex-col  gap-y-10'>
-      <div className='flex gap-x-6 px-8 pt-9  pb-6'>
-        <Image
-          src='/images/renz.png'
-          alt='Renz'
-          width={240}
-          height={240}
-          objectFit='cover'
-        ></Image>
+      <div className='flex gap-x-6 px-8 pt-6  pb-6'>
+        <div className=''>
+          <div className='relative h-60 w-60 overflow-hidden rounded-full '>
+            <Image
+              src='/images/renz.png'
+              alt='Renz'
+              layout='fill'
+              objectFit='cover'
+              objectPosition='top'
+            ></Image>
+          </div>
+        </div>
         <div className='flex flex-col justify-end'>
           <p className='font-spotify-circular-bold text-[12px]'>PROFILE</p>
-          <h1 className='text-7xl'>Renz Carillo</h1>
-          <div className='flex font-spotify-circular-light text-sm'>
-            <p>1st Year CS @ DLSU-D</p>
-            <p>&nbsp;• Philippines,</p>
-            <p>&nbsp;crc1046@dlsud.edu.ph</p>
+          <p className='whitespace-nowrap pt-[19px] pb-1 font-spotify-circular-bold text-7xl'>
+            Renz Carillo
+          </p>
+          <div className=' font-spotify-circular-light text-sm'>
+            <p className='float-left'>1st Year CS @ DLSU-D</p>
+            <p className='float-left'>&nbsp;• currently learning Haskell,</p>
+            <p className='float-left'>&nbsp;crc1046@dlsud.edu.ph</p>
           </div>
         </div>
       </div>
       <div className=''>
-        <div className='flex items-center gap-x-9 px-8 py-6'>
-          <Image src='/new-tab.png' alt='Renz' width={24} height={6}></Image>
-        </div>
+        <button className='relative mx-8 h-8 w-8 cursor-not-allowed overflow-hidden'>
+          <Image
+            src='/svg/more-options.svg'
+            alt='More Options'
+            layout='fill'
+          ></Image>
+        </button>
         <Cards cardsLimit={cardLimit} data={skillsData} type='Skills'></Cards>
         <Cards
           cardsLimit={cardLimit}

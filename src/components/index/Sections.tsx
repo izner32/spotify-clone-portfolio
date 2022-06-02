@@ -13,37 +13,37 @@ function sections() {
       name: 'My Playlist #1',
       image: '/new-tab.png',
       coverImage: '/images/playlist1-cover.png',
-      link: '/playlist/first',
+      link: '/playlist/First',
     },
     {
       name: 'My Playlist #2',
       image: '/new-tab.png',
       coverImage: '/images/playlist2-cover.png',
-      link: '/playlist/second',
+      link: '/playlist/Second',
     },
     {
       name: 'Profile',
       image: '/new-tab.png',
       coverImage: '/images/renz.png',
-      link: '/profile',
+      link: '/Profile',
     },
     {
       name: 'Skills',
       image: '/new-tab.png',
       coverImage: '/images/skills-cover.png',
-      link: '/skills',
+      link: '/Skills',
     },
     {
       name: 'Projects',
       image: '/new-tab.png',
       coverImage: '/images/projects-cover.png',
-      link: '/projects',
+      link: '/Projects',
     },
     {
       name: 'Certifications',
       image: '/new-tab.png',
       coverImage: '/images/certifications-cover.png',
-      link: '/certifications',
+      link: '/Certifications',
     },
   ];
 

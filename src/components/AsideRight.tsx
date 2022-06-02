@@ -1,21 +1,47 @@
+import Cookie from 'js-cookie';
 import Image from 'next/image';
 import { Resizable } from 're-resizable';
-import React, { Dispatch, SetStateAction } from 'react';
+import React, { useEffect, useState } from 'react';
 
-type AsideRightProps = {
-  isAsideRightOpen: boolean;
-  setIsAsideRightOpen: Dispatch<SetStateAction<boolean>>;
-};
+interface asideRightProps {
+  initialAsideRightHandler: string;
+  initialIsAsideRightOpen: string;
+}
 
-const AsideRight: React.FC<AsideRightProps> = (props) => {
+const AsideRight: React.FC<asideRightProps> = ({
+  initialAsideRightHandler,
+  initialIsAsideRightOpen,
+}) => {
+  const [asideRightHandler, setAsideRightHandler] = useState(
+    JSON.parse(initialAsideRightHandler)
+  );
+  const [isAsideRightOpen, setIsAsideRightOpen] = useState(
+    JSON.parse(initialIsAsideRightOpen.toLowerCase())
+  );
+
+  useEffect(() => {
+    Cookie.set('asideRightHandler', JSON.stringify(asideRightHandler), {
+      expires: 7,
+    });
+  }, [asideRightHandler]);
+
+  useEffect(() => {
+    Cookie.set('isAsideRightOpen', `${isAsideRightOpen}`, { expires: 7 });
+  }, [isAsideRightOpen]);
+
   return (
     <Resizable
-      defaultSize={{
-        width:
-          typeof window !== 'undefined'
-            ? Number(localStorage.getItem('rightHandlerSize'))
-            : 270,
-        height: 200,
+      size={{
+        width: asideRightHandler.width,
+        height: asideRightHandler.height,
+      }}
+      onResizeStop={(e, direction, ref) => {
+        setAsideRightHandler({
+          width: parseInt(ref.style.width),
+          height: parseInt(ref.style.height),
+          x: 0,
+          y: 0,
+        });
       }}
       minHeight='100vh'
       minWidth={270}
@@ -31,13 +57,8 @@ const AsideRight: React.FC<AsideRightProps> = (props) => {
           left: 0,
         },
       }}
-      onResizeStop={(_e, _direction, _ref, data) => {
-        const currentSize =
-          Number(localStorage.getItem('rightHandlerSize')) + data.width;
-        localStorage.setItem('rightHandlerSize', currentSize.toString());
-      }}
       className={`h-[100vh] w-80 overflow-hidden bg-black p-[16px] text-sm ${
-        !props.isAsideRightOpen ? 'hidden' : ''
+        !isAsideRightOpen ? 'hidden' : ''
       }`}
     >
       <div className='flex h-full flex-col'>
@@ -55,7 +76,7 @@ const AsideRight: React.FC<AsideRightProps> = (props) => {
             </button>
             <button
               className='rounded-full p-2 hover:bg-[#1a1a1a]'
-              onClick={() => props.setIsAsideRightOpen(false)}
+              onClick={() => setIsAsideRightOpen(false)}
             >
               <div className='filter-gray relative h-4 w-4'>
                 <Image

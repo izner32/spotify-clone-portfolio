@@ -1,30 +1,37 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import AsideLeft from '@/components/AsideLeft';
 import AsideRight from '@/components/AsideRight';
 import Player from '@/components/Player';
 import TopNav from '@/components/TopNav';
 
-type ComponentProps = {
-  children: React.ReactNode;
-};
+interface Props {
+  initialAsideLeftHandler: string;
+  initialAsideRightHandler: string;
+  initialIsAsideRightOpen: string;
+  children: JSX.Element[] | JSX.Element;
+}
 
-const Layout: React.FC<ComponentProps> = (props) => {
-  const { children } = props;
-  const [isAsideRightOpen, setIsAsideRightOpen] = useState(true);
-
+const Layout: React.FC<Props> = ({
+  children,
+  initialAsideLeftHandler,
+  initialAsideRightHandler,
+  initialIsAsideRightOpen,
+}) => {
   return (
     <>
       <div className='flex h-screen flex-col'>
         <div className='flex'>
-          <AsideLeft></AsideLeft>
+          <AsideLeft
+            initialAsideLeftHandler={initialAsideLeftHandler}
+          ></AsideLeft>
           <div className='relative h-[86.5vh] w-full overflow-y-scroll bg-[rgb(18,18,18)] text-white'>
             <TopNav></TopNav>
             <main>{children}</main>
           </div>
           <AsideRight
-            isAsideRightOpen={isAsideRightOpen}
-            setIsAsideRightOpen={setIsAsideRightOpen}
+            initialAsideRightHandler={initialAsideRightHandler}
+            initialIsAsideRightOpen={initialIsAsideRightOpen}
           ></AsideRight>
         </div>
         <Player></Player>
