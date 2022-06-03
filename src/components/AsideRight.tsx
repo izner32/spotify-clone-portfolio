@@ -2,21 +2,25 @@ import Cookie from 'js-cookie';
 import Image from 'next/image';
 import { Resizable } from 're-resizable';
 import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { setIsAsideRightOpen } from '@/redux/asideRightSlice';
+import { RootState } from '@/redux/store';
 
 interface asideRightProps {
   initialAsideRightHandler: string;
-  initialIsAsideRightOpen: string;
 }
 
 const AsideRight: React.FC<asideRightProps> = ({
   initialAsideRightHandler,
-  initialIsAsideRightOpen,
 }) => {
+  const dispatch = useDispatch();
   const [asideRightHandler, setAsideRightHandler] = useState(
     JSON.parse(initialAsideRightHandler)
   );
-  const [isAsideRightOpen, setIsAsideRightOpen] = useState(
-    JSON.parse(initialIsAsideRightOpen.toLowerCase())
+
+  const isAsideRightOpen = useSelector(
+    (state: RootState) => state.asideRight.isAsideRightOpen
   );
 
   useEffect(() => {
@@ -24,10 +28,6 @@ const AsideRight: React.FC<asideRightProps> = ({
       expires: 7,
     });
   }, [asideRightHandler]);
-
-  useEffect(() => {
-    Cookie.set('isAsideRightOpen', `${isAsideRightOpen}`, { expires: 7 });
-  }, [isAsideRightOpen]);
 
   return (
     <Resizable
@@ -76,7 +76,9 @@ const AsideRight: React.FC<asideRightProps> = ({
             </button>
             <button
               className='rounded-full p-2 hover:bg-[#1a1a1a]'
-              onClick={() => setIsAsideRightOpen(false)}
+              onClick={() => {
+                dispatch(setIsAsideRightOpen());
+              }}
             >
               <div className='filter-gray relative h-4 w-4'>
                 <Image

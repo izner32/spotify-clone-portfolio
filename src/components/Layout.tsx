@@ -8,7 +8,6 @@ import TopNav from '@/components/TopNav';
 interface Props {
   initialAsideLeftHandler: string;
   initialAsideRightHandler: string;
-  initialIsAsideRightOpen: string;
   children: JSX.Element[] | JSX.Element;
 }
 
@@ -16,7 +15,6 @@ const Layout: React.FC<Props> = ({
   children,
   initialAsideLeftHandler,
   initialAsideRightHandler,
-  initialIsAsideRightOpen,
 }) => {
   return (
     <>
@@ -31,7 +29,6 @@ const Layout: React.FC<Props> = ({
           </div>
           <AsideRight
             initialAsideRightHandler={initialAsideRightHandler}
-            initialIsAsideRightOpen={initialIsAsideRightOpen}
           ></AsideRight>
         </div>
         <Player></Player>

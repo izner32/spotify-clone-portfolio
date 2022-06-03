@@ -1,8 +1,12 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+
+import { setIsAsideRightOpen } from '@/redux/asideRightSlice';
 
 function TopNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useDispatch();
 
   return (
     <div className='sticky top-0 z-10 bg-[rgb(18,18,18)]'>
@@ -79,7 +83,12 @@ function TopNav() {
                 </button>
               </li>
               <li>
-                <button className='flex w-44 justify-start rounded-md p-[11px] hover:bg-[#3e3e3e]'>
+                <button
+                  className='flex w-44 justify-start rounded-md p-[11px] hover:bg-[#3e3e3e]'
+                  onClick={() => {
+                    dispatch(setIsAsideRightOpen());
+                  }}
+                >
                   <span>View Friend Activity</span>
                 </button>
               </li>
