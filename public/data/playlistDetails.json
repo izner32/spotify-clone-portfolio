@@ -1,26 +1,32 @@
 [
   {
     "playlist": ":<",
-    "img": "./images/playlistOne-cover.png"
+    "img": "/images/playlistOne-cover.png",
+    "link": "/playlist/first"
   }, 
   {
     "playlist": "stucked in an endless loop",
-    "img": "./images/playlistTwo-cover.png"
+    "img": "/images/playlistTwo-cover.png",
+    "link": "/playlist/second"
   },
   {
     "playlist": "Profile",
-    "img": "./images/profile-cover.png"
+    "img": "/images/profile-cover.png",
+    "link": "/profile"
   },
   {
     "playlist": "Skills",
-    "img": "./images/skills-cover.png"
+    "img": "/images/skills-cover.png",
+    "link": "/skills"
   },
   {
     "playlist": "Projects",
-    "img": "./images/projects-cover.png"
+    "img": "/images/projects-cover.png",
+    "link": "/projects"
   },
   {
     "playlist": "Certifications",
-    "img": "./images/certifications-cover.png"
+    "img": "/images/certifications-cover.png",
+    "link": "/certifications"
   }
 ]

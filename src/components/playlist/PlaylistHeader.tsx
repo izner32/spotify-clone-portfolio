@@ -5,7 +5,7 @@ import React from 'react';
 
 import { msToTime } from '@/lib/msToTime';
 
-function PlaylistHeader({ data }) {
+function PlaylistHeader({ data, details, playlistNumber }) {
   const playlistLength: number = data.items.length;
   const totalLengthOfSongs: number = data.items.reduce(
     (accumulator: any, current: { track: { duration_ms: number } }) =>
@@ -60,7 +60,9 @@ function PlaylistHeader({ data }) {
         <p className='font-spotify-circular-bold text-[12px] leading-none'>
           PLAYLIST
         </p>
-        <h1 className='text-[96px] leading-tight'>My Playlist #1</h1>
+        <h1 className='text-[96px] leading-tight'>
+          {details[playlistNumber - 1].playlist}
+        </h1>
         <div className='flex font-spotify-circular-light text-sm'>
           <Link href='/Profile'>
             <a className='font-spotify-circular-bold hover:underline'>

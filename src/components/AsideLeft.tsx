@@ -6,6 +6,8 @@ import { useRouter } from 'next/router';
 import { Resizable } from 're-resizable';
 import React, { useEffect, useState } from 'react';
 
+import playlistDetails from './../../public/data/playlistDetails.json';
+
 const AsideLeft: React.FC<{ initialAsideLeftHandler: string }> = ({
   initialAsideLeftHandler,
 }) => {
@@ -193,84 +195,24 @@ const AsideLeft: React.FC<{ initialAsideLeftHandler: string }> = ({
         <div className='mx-6 border-t-[0.1px] border-spotify-bg-light-gray'></div>
         <div className='h-48 px-6 pt-[11px] font-spotify-circular-light'>
           <ul className=''>
-            <li
-              className={`py-[5px] hover:text-white ${
-                router.pathname == '/playlist/First' ? 'text-white' : ''
-              }`}
-            >
-              <Link href='/playlist/First' passHref>
-                <a>
-                  <p>
-                    <span>My Playlist #1</span>
-                  </p>
-                </a>
-              </Link>
-            </li>
-            <li
-              className={`py-[5px] hover:text-white ${
-                router.pathname == '/playlist/Second' ? 'text-white' : ''
-              }`}
-            >
-              <Link href='/playlist/Second' passHref>
-                <a>
-                  <p>
-                    <span>My Playlist #2</span>
-                  </p>
-                </a>
-              </Link>
-            </li>
-            <li
-              className={`py-[5px] hover:text-white ${
-                router.pathname == '/Profile' ? 'text-white' : ''
-              }`}
-            >
-              <Link href='/Profile' passHref>
-                <a>
-                  <p>
-                    <span>Profile</span>
-                  </p>
-                </a>
-              </Link>
-            </li>
-            <li
-              className={`py-[5px] hover:text-white ${
-                router.pathname == '/Skills' ? 'text-white' : ''
-              }`}
-            >
-              <Link href='/Skills' passHref>
-                <a>
-                  <p>
-                    <span>Skills</span>
-                  </p>
-                </a>
-              </Link>
-            </li>
-            <li
-              className={`py-[5px] hover:text-white ${
-                router.pathname == '/Projects' ? 'text-white' : ''
-              }`}
-            >
-              <Link href='/Projects' passHref>
-                <a>
-                  <p>
-                    <span>Projects</span>
-                  </p>
-                </a>
-              </Link>
-            </li>
-            <li
-              className={`py-[5px] hover:text-white ${
-                router.pathname == '/Certifications' ? 'text-white' : ''
-              }`}
-            >
-              <Link href='/Certifications' passHref>
-                <a>
-                  <p>
-                    <span>Certifications</span>
-                  </p>
-                </a>
-              </Link>
-            </li>
+            {playlistDetails.map((item, key) => {
+              return (
+                <li
+                  key={key}
+                  className={`py-[5px] hover:text-white ${
+                    router.pathname == item.link ? 'text-white' : ''
+                  }`}
+                >
+                  <Link href={item.link} passHref>
+                    <a>
+                      <p>
+                        <span>{item.playlist}</span>
+                      </p>
+                    </a>
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className='relative -bottom-3 h-10 items-center px-6 font-spotify-circular-bold hover:text-white '>
