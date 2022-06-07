@@ -1,22 +1,79 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-function PlaylistHeader() {
+import { msToTime } from '@/lib/msToTime';
+
+function PlaylistHeader({ data }) {
+  const playlistLength: number = data.items.length;
+  const totalLengthOfSongs: number = data.items.reduce(
+    (accumulator: any, current: { track: { duration_ms: number } }) =>
+      accumulator + (current.track.duration_ms ? current.track.duration_ms : 0),
+    0
+  );
+  const hours: number = msToTime(totalLengthOfSongs, 'hours');
+  const minutes: number = msToTime(totalLengthOfSongs, 'minutes');
+  const seconds: number = msToTime(totalLengthOfSongs, 'seconds');
+
   return (
-    <div className='flex gap-x-6 px-8 pt-9 pb-6'>
-      <Image src='/new-tab.png' alt='Renz' width={240} height={240}></Image>
-      <div className='flex flex-col justify-end'>
-        <p className='font-spotify-circular-bold text-[12px]'>PLAYLIST</p>
-        <h1 className='text-7xl'>My Playlist #1</h1>
+    <div className='flex items-end gap-x-6 px-8 pt-5 pb-6'>
+      <div className=''>
+        <div className='flex'>
+          <div className='relative h-28 w-28 flex-shrink-0 flex-grow-0'>
+            <Image
+              src={data.items[0].track.album.images[0].url}
+              alt='Renz'
+              layout='fill'
+              objectFit='cover'
+            ></Image>
+          </div>
+          <div className='relative h-28 w-28 flex-shrink-0 flex-grow-0'>
+            <Image
+              src={data.items[1].track.album.images[0].url}
+              alt='Renz'
+              layout='fill'
+              objectFit='cover'
+            ></Image>
+          </div>
+        </div>
+        <div className='flex'>
+          <div className='relative h-28 w-28 flex-shrink-0 flex-grow-0'>
+            <Image
+              src={data.items[2].track.album.images[0].url}
+              alt='Renz'
+              layout='fill'
+              objectFit='cover'
+            ></Image>
+          </div>
+          <div className='relative h-28 w-28 flex-shrink-0 flex-grow-0'>
+            <Image
+              src={data.items[3].track.album.images[0].url}
+              alt='Renz'
+              layout='fill'
+              objectFit='cover'
+            ></Image>
+          </div>
+        </div>
+      </div>
+      <div className='flex flex-shrink-0 flex-grow-0 flex-col '>
+        <p className='font-spotify-circular-bold text-[12px] leading-none'>
+          PLAYLIST
+        </p>
+        <h1 className='text-[96px] leading-tight'>My Playlist #1</h1>
         <div className='flex font-spotify-circular-light text-sm'>
-          <Link href='/profile'>
+          <Link href='/Profile'>
             <a className='font-spotify-circular-bold hover:underline'>
               Renz Carillo
             </a>
           </Link>
-          <p>&nbsp;• 177 Songs,</p>
-          <p className='text-spotify-gray'>&nbsp;about 10 hr</p>
+          <p>&nbsp;• {playlistLength} Songs,</p>
+          <p className='text-spotify-gray'>
+            &nbsp;about{' '}
+            {!hours
+              ? minutes + ' min ' + seconds + ' sec'
+              : hours + ' hr ' + minutes + ' min'}{' '}
+          </p>
         </div>
       </div>
     </div>

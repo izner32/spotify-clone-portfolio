@@ -33,7 +33,7 @@ const AsideRight: React.FC<asideRightProps> = ({
     <Resizable
       size={{
         width: asideRightHandler.width,
-        height: asideRightHandler.height,
+        height: '100vh',
       }}
       onResizeStop={(e, direction, ref) => {
         setAsideRightHandler({
@@ -65,27 +65,36 @@ const AsideRight: React.FC<asideRightProps> = ({
         <div className='mb-8 flex items-center justify-between font-spotify-circular-bold text-spotify-gray'>
           <p className='text-[15px]'>Friend Activity</p>
           <div className='flex items-center justify-center '>
-            <button className='cursor-not-allowed rounded-full p-2 hover:bg-[#1a1a1a]'>
-              <div className='filter-gray relative h-4 w-4'>
-                <Image
-                  src='/svg/add-friend.svg'
-                  alt='Friend Activity'
-                  layout='fill'
-                ></Image>
-              </div>
-            </button>
             <button
-              className='rounded-full p-2 hover:bg-[#1a1a1a]'
+              className='rounded-full hover:bg-[#1a1a1a]'
               onClick={() => {
                 dispatch(setIsAsideRightOpen());
               }}
             >
-              <div className='filter-gray relative h-4 w-4'>
-                <Image
-                  src='/svg/close-aside-right.svg'
-                  alt='Close'
-                  layout='fill'
-                ></Image>
+              <div className='filter-gray p-2 '>
+                <div className=' relative h-4 w-4'>
+                  <Image
+                    src='/svg/add-friend.svg'
+                    alt='Friend Activity'
+                    layout='fill'
+                  ></Image>
+                </div>
+              </div>
+            </button>
+            <button
+              className='rounded-full hover:bg-[#1a1a1a]'
+              onClick={() => {
+                dispatch(setIsAsideRightOpen());
+              }}
+            >
+              <div className='filter-gray p-2 '>
+                <div className=' relative h-4 w-4'>
+                  <Image
+                    src='/svg/close-aside-right.svg'
+                    alt='Close'
+                    layout='fill'
+                  ></Image>
+                </div>
               </div>
             </button>
             <style jsx>{`

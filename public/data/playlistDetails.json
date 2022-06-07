@@ -1,0 +1,26 @@
+[
+  {
+    "playlist": ":<",
+    "img": "./images/playlistOne-cover.png"
+  }, 
+  {
+    "playlist": "stucked in an endless loop",
+    "img": "./images/playlistTwo-cover.png"
+  },
+  {
+    "playlist": "Profile",
+    "img": "./images/profile-cover.png"
+  },
+  {
+    "playlist": "Skills",
+    "img": "./images/skills-cover.png"
+  },
+  {
+    "playlist": "Projects",
+    "img": "./images/projects-cover.png"
+  },
+  {
+    "playlist": "Certifications",
+    "img": "./images/certifications-cover.png"
+  }
+]

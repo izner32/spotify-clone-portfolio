@@ -3,13 +3,23 @@ import React from 'react';
 import Playlist from '@/components/playlist/Playlist';
 import PlaylistHeader from '@/components/playlist/PlaylistHeader';
 
-function Second() {
+import playlistTwo from './../../../public/data/playlistTwo.json';
+
+function Second({ data }) {
   return (
     <>
-      <PlaylistHeader></PlaylistHeader>
-      <Playlist></Playlist>
+      <PlaylistHeader data={data}></PlaylistHeader>
+      <Playlist data={data}></Playlist>
     </>
   );
 }
 
 export default Second;
+
+export async function getStaticProps() {
+  return {
+    props: {
+      data: playlistTwo,
+    },
+  };
+}

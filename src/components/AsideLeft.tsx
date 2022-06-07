@@ -43,7 +43,7 @@ const AsideLeft: React.FC<{ initialAsideLeftHandler: string }> = ({
 
   return (
     <Resizable
-      minHeight='100vh'
+      // minHeight='100vh'
       minWidth={200}
       maxWidth={320}
       enable={{
@@ -57,7 +57,7 @@ const AsideLeft: React.FC<{ initialAsideLeftHandler: string }> = ({
           right: 0,
         },
       }}
-      size={{ width: asideLeftHandler.width, height: asideLeftHandler.height }}
+      size={{ width: asideLeftHandler.width, height: '100vh' }}
       onResizeStop={(e, direction, ref) => {
         setAsideLeftHandler({
           width: parseInt(ref.style.width),
@@ -66,9 +66,9 @@ const AsideLeft: React.FC<{ initialAsideLeftHandler: string }> = ({
           y: 0,
         });
       }}
-      className={`relative truncate bg-black text-sm  text-spotify-gray `}
+      className='relative truncate bg-black text-sm  text-spotify-gray'
     >
-      <div>
+      <div className=''>
         <div className='mt-[23px] w-auto pb-1 pl-6'>
           <Image
             src='/svg/Spotify.svg'
