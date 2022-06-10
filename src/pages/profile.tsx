@@ -34,7 +34,10 @@ function Profile() {
           </p>
           <div className=' font-spotify-circular-light text-sm'>
             <p className='float-left'>1st Year CS @ DLSU-D</p>
-            <p className='float-left'>&nbsp;• currently learning Haskell,</p>
+            <p className='float-left'>
+              &nbsp;• currently learning Haskell and DevOps | i leetcode
+              sometimes,
+            </p>
             <p className='float-left'>&nbsp;crc1046@dlsud.edu.ph</p>
           </div>
         </div>

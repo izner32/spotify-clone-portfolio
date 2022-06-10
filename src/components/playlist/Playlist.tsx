@@ -1,18 +1,37 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from 'next/image';
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { millisToMinutesAndSeconds } from '@/lib/msToTime';
 
+import { setIsPlaying, setSongPlayer } from '@/redux/songPlayerSlice';
+import { RootState } from '@/redux/store';
+
 function Playlist({ data }: any) {
+  const dispatch = useDispatch();
   const [isMusicHovering, setIsMusicHovering] = useState(
     data.items.map(() => ({ isMusicHovering: false }))
+  );
+  const currentSelectedSong = useSelector(
+    (state: RootState) => state.songPlayer.setSong
   );
 
   return (
     <div className='mb-[30px] px-8'>
       <div className='flex items-center gap-x-9  py-6'>
-        <button className='cursor-not-allowed rounded-full bg-[#1ED760] p-[19px] hover:scale-105'>
+        <button
+          className='cursor-default rounded-full bg-[#1ED760] p-[19px] hover:scale-105'
+          onClick={() =>
+            dispatch(
+              setSongPlayer({
+                isPlaying: true,
+                index: 0,
+                track: data.items[0].track,
+              })
+            )
+          }
+        >
           <div className='relative h-[18px] w-[18px]'>
             <Image src='/svg/play.svg' alt='Play' layout='fill'></Image>
           </div>
@@ -53,6 +72,15 @@ function Playlist({ data }: any) {
               <li
                 key={key}
                 className='flex h-[50px] cursor-default items-center gap-x-3.5 whitespace-nowrap rounded-md px-4 text-sm hover:bg-[#2A2A2A] focus:bg-[#5A5A5A] active:bg-[#5A5A5A]'
+                onDoubleClick={() => {
+                  dispatch(
+                    setSongPlayer({
+                      isPlaying: true,
+                      index: key,
+                      track: x.track,
+                    })
+                  );
+                }}
                 onMouseEnter={() => {
                   setIsMusicHovering(
                     [...isMusicHovering].map((object) => {
@@ -73,14 +101,47 @@ function Playlist({ data }: any) {
                 }}
               >
                 <div className='flex w-4 flex-shrink-0 justify-center text-base'>
-                  {isMusicHovering[key].isMusicHovering ? (
-                    <div className='relative h-4 w-4'>
+                  {isMusicHovering[key].isMusicHovering &&
+                  currentSelectedSong.isPlaying &&
+                  currentSelectedSong.track.name == x.track.name ? (
+                    <button
+                      className='relative h-4 w-4 cursor-default'
+                      onClick={() => {
+                        dispatch(
+                          setSongPlayer({
+                            isPlaying: true,
+                            index: key,
+                            track: x.track,
+                          })
+                        );
+                        dispatch(setIsPlaying());
+                      }}
+                    >
+                      <Image
+                        src='/svg/pause-white.svg'
+                        alt='Play'
+                        layout='fill'
+                      ></Image>
+                    </button>
+                  ) : isMusicHovering[key].isMusicHovering ? (
+                    <button
+                      className='relative h-4 w-4 cursor-default'
+                      onClick={() => {
+                        dispatch(
+                          setSongPlayer({
+                            isPlaying: true,
+                            index: key,
+                            track: x.track,
+                          })
+                        );
+                      }}
+                    >
                       <Image
                         src='/svg/play-white.svg'
                         alt='Play'
                         layout='fill'
                       ></Image>
-                    </div>
+                    </button>
                   ) : (
                     <span className=''>{key + 1}</span>
                   )}
@@ -95,7 +156,13 @@ function Playlist({ data }: any) {
                 </div>
                 <div className='grid w-full grid-cols-2 items-center gap-x-3.5  lg:grid-cols-[2fr,1.5fr,1fr]'>
                   <div className=' overflow-hidden'>
-                    <p className=' overflow-hidden text-ellipsis whitespace-nowrap font-spotify-circular-light text-base text-white'>
+                    <p
+                      className={`${
+                        currentSelectedSong.track.name == x.track.name
+                          ? 'text-[#1ED760]'
+                          : 'text-white'
+                      } overflow-hidden text-ellipsis whitespace-nowrap font-spotify-circular-light text-base text-white`}
+                    >
                       {x.track.name}
                     </p>
                     <button className='flex cursor-not-allowed justify-start'>

@@ -28,6 +28,7 @@
   /* #endregion  /**======== Primary Color =========== */
 }
 
+/* scrollbar  */
 ::-webkit-scrollbar {
   height: 5px;
   width: 10px;
@@ -36,12 +37,61 @@
 
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.3);
-  /* border-radius: 20px; */
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.7);
-  /* border-radius: 20px; */
+}
+
+/* range-player */
+/* general */
+#range-player {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 9999px;
+
+  background-image: linear-gradient(white, white);
+  background-size: 10% 100%;
+  background-repeat: no-repeat;
+}
+
+#range-player:hover {
+  background-image: linear-gradient(#1ed760, #1ed760);
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+}
+
+#volume-range-player {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 9999px;
+
+  background-image: linear-gradient(white, white);
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+#volume-range-player:hover {
+  background-image: linear-gradient(#1ed760, #1ed760);
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: white;
+  display: none;
+}
+
+input[type='range']:hover::-webkit-slider-thumb {
+  display: block;
 }
 
 @layer base {
