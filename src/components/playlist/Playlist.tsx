@@ -18,8 +18,8 @@ function Playlist({ data }: any) {
   );
 
   return (
-    <div className='mb-[30px] px-8'>
-      <div className='flex items-center gap-x-9  py-6'>
+    <div className='mb-[30px] md:px-8'>
+      <div className='hidden items-center gap-x-9 py-6  md:flex'>
         <button
           className='cursor-default rounded-full bg-[#1ED760] p-[19px] hover:scale-105'
           onClick={() =>
@@ -45,7 +45,7 @@ function Playlist({ data }: any) {
         </button>
       </div>
       <div className='text-spotify-gray '>
-        <div className='mb-3.5 flex items-center gap-x-3.5 px-4 text-xs'>
+        <div className='mb-3.5 hidden items-center gap-x-3.5 px-4 text-xs md:flex'>
           <div className='flex w-4 flex-shrink-0 justify-center text-base'>
             <span className=''>#</span>
           </div>
@@ -71,7 +71,18 @@ function Playlist({ data }: any) {
             return (
               <li
                 key={key}
-                className='flex h-[50px] cursor-default items-center gap-x-3.5 whitespace-nowrap rounded-md px-4 text-sm hover:bg-[#2A2A2A] focus:bg-[#5A5A5A] active:bg-[#5A5A5A]'
+                className='flex h-[72px] cursor-default items-center gap-x-3.5 whitespace-nowrap rounded-md px-4 text-sm md:h-[50px] md:hover:bg-[#2A2A2A] md:focus:bg-[#5A5A5A] md:active:bg-[#5A5A5A]'
+                onClick={() => {
+                  if (window.innerWidth < 768) {
+                    dispatch(
+                      setSongPlayer({
+                        isPlaying: true,
+                        index: key,
+                        track: x.track,
+                      })
+                    );
+                  }
+                }}
                 onDoubleClick={() => {
                   dispatch(
                     setSongPlayer({
@@ -100,10 +111,11 @@ function Playlist({ data }: any) {
                   );
                 }}
               >
-                <div className='flex w-4 flex-shrink-0 justify-center text-base'>
+                <div className='flex w-10 flex-shrink-0 justify-center text-base md:w-4'>
                   {isMusicHovering[key].isMusicHovering &&
                   currentSelectedSong.isPlaying &&
-                  currentSelectedSong.track.name == x.track.name ? (
+                  currentSelectedSong.track.name == x.track.name &&
+                  window.innerWidth > 768 ? (
                     <button
                       className='relative h-4 w-4 cursor-default'
                       onClick={() => {
@@ -123,7 +135,8 @@ function Playlist({ data }: any) {
                         layout='fill'
                       ></Image>
                     </button>
-                  ) : isMusicHovering[key].isMusicHovering ? (
+                  ) : isMusicHovering[key].isMusicHovering &&
+                    window.innerWidth > 768 ? (
                     <button
                       className='relative h-4 w-4 cursor-default'
                       onClick={() => {
@@ -143,10 +156,10 @@ function Playlist({ data }: any) {
                       ></Image>
                     </button>
                   ) : (
-                    <span className=''>{key + 1}</span>
+                    <span className='text-sm md:text-base'>{key + 1}</span>
                   )}
                 </div>
-                <div className='flex flex-shrink-0 flex-grow-0 items-center'>
+                <div className='hidden flex-shrink-0 flex-grow-0 items-center md:flex'>
                   <Image
                     src={x.track.album.images[2].url}
                     alt='Renz'
@@ -154,7 +167,7 @@ function Playlist({ data }: any) {
                     height={40}
                   ></Image>
                 </div>
-                <div className='grid w-full grid-cols-2 items-center gap-x-3.5  lg:grid-cols-[2fr,1.5fr,1fr]'>
+                <div className='grid w-full grid-cols-1 items-center gap-x-3.5 md:grid-cols-2  lg:grid-cols-[2fr,1.5fr,1fr]'>
                   <div className=' overflow-hidden'>
                     <p
                       className={`${
@@ -167,8 +180,9 @@ function Playlist({ data }: any) {
                     </p>
                     <button className='flex cursor-not-allowed justify-start'>
                       <p
-                        className={`overflow-hidden text-ellipsis whitespace-nowrap hover:underline ${
-                          isMusicHovering[key].isMusicHovering
+                        className={`overflow-hidden text-ellipsis whitespace-nowrap md:hover:underline ${
+                          isMusicHovering[key].isMusicHovering &&
+                          window.innerWidth > 768
                             ? 'text-white'
                             : ''
                         }`}
@@ -177,7 +191,7 @@ function Playlist({ data }: any) {
                       </p>
                     </button>
                   </div>
-                  <button className='flex cursor-not-allowed  justify-start overflow-hidden'>
+                  <button className='hidden cursor-not-allowed justify-start  overflow-hidden md:flex'>
                     <p
                       className={`overflow-hidden text-ellipsis whitespace-nowrap hover:underline ${
                         isMusicHovering[key].isMusicHovering ? 'text-white' : ''
@@ -189,7 +203,7 @@ function Playlist({ data }: any) {
                   <p className='hidden lg:block'>Not So Long Ago</p>
                 </div>
                 <div
-                  className={`flex w-28 gap-x-4  ${
+                  className={`hidden w-28 gap-x-4 md:flex  ${
                     isMusicHovering[key].isMusicHovering ? '' : 'justify-center'
                   }`}
                 >
@@ -213,6 +227,16 @@ function Playlist({ data }: any) {
                       isMusicHovering[key].isMusicHovering ? '' : 'hidden'
                     }`}
                   >
+                    <Image
+                      src='/svg/more-options-large.svg'
+                      alt='More Options'
+                      width={18}
+                      height={18}
+                    ></Image>
+                  </button>
+                </div>
+                <div className='ml-[14px]  md:hidden'>
+                  <button className='flex cursor-not-allowed items-center'>
                     <Image
                       src='/svg/more-options-large.svg'
                       alt='More Options'

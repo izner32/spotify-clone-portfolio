@@ -57,8 +57,8 @@ const AsideRight: React.FC<asideRightProps> = ({
           left: 0,
         },
       }}
-      className={`h-[100vh] w-80 overflow-hidden bg-black p-[16px] text-sm ${
-        !isAsideRightOpen ? 'hidden' : ''
+      className={`h-[100vh] w-80 overflow-hidden bg-black p-[16px] text-sm  ${
+        !isAsideRightOpen ? 'hidden' : 'hidden lg:block'
       }`}
     >
       <div className='flex h-full flex-col'>

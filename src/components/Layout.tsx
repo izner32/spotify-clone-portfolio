@@ -2,6 +2,7 @@ import React from 'react';
 
 import AsideLeft from '@/components/AsideLeft';
 import AsideRight from '@/components/AsideRight';
+import BottomNav from '@/components/BottomNav';
 import Player from '@/components/Player';
 import TopNav from '@/components/TopNav';
 
@@ -18,12 +19,12 @@ const Layout: React.FC<Props> = ({
 }) => {
   return (
     <>
-      <div className='flex h-screen flex-col'>
+      <div className='flex h-screen flex-col bg-[rgb(18,18,18)]'>
         <div className='flex'>
           <AsideLeft
             initialAsideLeftHandler={initialAsideLeftHandler}
           ></AsideLeft>
-          <div className='relative h-[86.5vh] w-full overflow-y-scroll bg-[rgb(18,18,18)] text-white'>
+          <div className='relative h-screen w-full overflow-y-scroll text-white md:h-[86.5vh]'>
             <TopNav></TopNav>
             <main>{children}</main>
           </div>
@@ -32,6 +33,7 @@ const Layout: React.FC<Props> = ({
           ></AsideRight>
         </div>
         <Player></Player>
+        <BottomNav></BottomNav>
       </div>
     </>
   );

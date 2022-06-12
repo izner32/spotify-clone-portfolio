@@ -27,7 +27,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className='mb-10 flex flex-col gap-y-10'>
+      <div className='md:ap-y-10 mb-10 flex flex-col'>
         <Sections></Sections>
         <Cards cardsLimit={cardLimit} data={skillsData} type='Skills'></Cards>
         <Cards

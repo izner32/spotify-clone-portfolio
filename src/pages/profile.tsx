@@ -15,7 +15,8 @@ function Profile() {
 
   return (
     <div className='mb-10 flex flex-col  gap-y-10'>
-      <div className='flex gap-x-6 px-8 pt-6  pb-6'>
+      {/* desktop */}
+      <div className='hidden gap-x-6 px-8 pt-6 pb-6  md:flex'>
         <div className=''>
           <div className='relative h-60 w-60 overflow-hidden rounded-full '>
             <Image
@@ -33,17 +34,43 @@ function Profile() {
             Renz Carillo
           </p>
           <div className=' font-spotify-circular-light text-sm'>
-            <p className='float-left'>1st Year CS @ DLSU-D</p>
             <p className='float-left'>
-              &nbsp;• currently learning Haskell and DevOps | i leetcode
-              sometimes,
+              &nbsp;currently learning Haskell and DevOps
             </p>
-            <p className='float-left'>&nbsp;crc1046@dlsud.edu.ph</p>
+            <p className='float-left'>,crc1046@dlsud.edu.ph</p>
           </div>
         </div>
       </div>
+
+      {/* mobile */}
+      <div className='flex h-[204px] flex-col gap-y-1.5 p-4 md:hidden'>
+        <div className='flex gap-x-[14px]'>
+          <div className='relative h-[150px] w-[150px] flex-shrink-0 overflow-hidden rounded-full'>
+            <Image
+              src='/images/renz.png'
+              alt='Renz'
+              layout='fill'
+              objectFit='cover'
+              objectPosition='top'
+            ></Image>
+          </div>
+          <p className='flex items-center font-spotify-circular-bold text-2xl'>
+            Renz Carillo
+          </p>
+        </div>
+        <div className='flex'>
+          <p className='font-spotify-circular-light text-sm'>
+            currently learning Haskell and DevOps
+          </p>
+          <p className='font-spotify-circular-light text-sm'>
+            ,crc1046@dlsud.edu.ph
+          </p>
+        </div>
+      </div>
+
+      {/* neutral */}
       <div className=''>
-        <button className='relative mx-8 h-8 w-8 cursor-not-allowed overflow-hidden'>
+        <button className='relative mx-8 hidden h-8 w-8 cursor-not-allowed md:block '>
           <Image
             src='/svg/more-options.svg'
             alt='More Options'

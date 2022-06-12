@@ -92,232 +92,312 @@ function Player() {
   };
 
   return (
-    <div className=' absolute bottom-0 h-[90px] w-full border-t-2 border-spotify-bg-light-gray bg-spotify-bg-gray p-4 text-xs text-white'>
-      <div className=' flex justify-between'>
-        <div className='flex h-fit w-96 items-center justify-center gap-x-[14px]'>
-          <div className='relative h-14 w-14 flex-shrink-0'>
-            <Image
-              src={currentSelectedSong.track.album.images[0].url}
-              alt='Renz'
-              layout='fill'
-              objectFit='cover'
-            ></Image>
-          </div>
-          <div className=' w-full'>
-            <div className='flex items-center gap-x-[14px]'>
-              <div className='h-8 w-full max-w-[244px]'>
-                <p className=''>{currentSelectedSong.track.name}</p>
-                <p className='text-[11px]'>
-                  {currentSelectedSong.track.artists[0].name}
-                </p>
-              </div>
-              <div className='flex flex-shrink-0 gap-x-4'>
-                <button className='cursor-not-allowed'>
-                  <Image
-                    src='/svg/heart.svg'
-                    alt='Liked Song'
-                    width={20}
-                    height={20}
-                  ></Image>
-                </button>
-                <button className='cursor-not-allowed'>
-                  <Image
-                    src='/svg/view.svg'
-                    alt='View'
-                    width={20}
-                    height={20}
-                  ></Image>
-                </button>
+    <>
+      {/* audio */}
+      <audio
+        ref={audioPlayer}
+        src={currentSelectedSong.track.preview_url}
+        preload='metadata'
+        onEnded={() =>
+          dispatch(
+            setSongPlayer({
+              isPlaying: true,
+              index: currentSelectedSong.index + 1,
+              track: data.items[currentSelectedSong.index + 1].track,
+            })
+          )
+        }
+      ></audio>
+
+      {/* desktop */}
+      <div className='absolute bottom-0 hidden h-[90px] w-full border-t-2 border-spotify-bg-light-gray bg-spotify-bg-gray p-4 text-xs text-white md:block'>
+        <div className=' flex justify-between'>
+          <div className='flex h-fit w-96 items-center justify-center gap-x-[14px]'>
+            <div className='relative flex h-14 w-14 flex-shrink-0 items-center justify-center text-center'>
+              {currentSelectedSong.track.name != '' ? (
+                <Image
+                  src={currentSelectedSong.track.album.images[0].url}
+                  alt='Renz'
+                  layout='fill'
+                  objectFit='cover'
+                ></Image>
+              ) : (
+                <p className=''>Select a song</p>
+              )}
+            </div>
+            <div className=' w-full'>
+              <div className='flex items-center gap-x-[14px]'>
+                <div className='h-8 w-full max-w-[244px]'>
+                  <p className=''>{currentSelectedSong.track.name}</p>
+                  <p className='text-[11px]'>
+                    {currentSelectedSong.track.artists[0].name}
+                  </p>
+                </div>
+                <div className='flex flex-shrink-0 gap-x-4'>
+                  <button className='cursor-not-allowed'>
+                    <Image
+                      src='/svg/heart.svg'
+                      alt='Liked Song'
+                      width={20}
+                      height={20}
+                    ></Image>
+                  </button>
+                  <button className='cursor-not-allowed'>
+                    <Image
+                      src='/svg/view.svg'
+                      alt='View'
+                      width={20}
+                      height={20}
+                    ></Image>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className='flex w-[33rem] flex-col'>
-          <div className='flex items-center justify-center gap-x-[6px]'>
-            {/* shuffle  */}
-            <button className='cursor-not-allowed p-[9.5px]'>
-              <div className='relative h-[14px] w-[14px]'>
-                <Image
-                  src='/svg/shuffle.svg'
-                  alt='Shuffle'
-                  layout='fill'
-                ></Image>
-              </div>
-            </button>
-
-            {/* previous */}
-            <button
-              className='cursor-default p-[9.5px]'
-              onClick={() =>
-                dispatch(
-                  setSongPlayer({
-                    isPlaying: true,
-                    index: currentSelectedSong.index - 1,
-                    track: data.items[currentSelectedSong.index - 1].track,
-                  })
-                )
-              }
-            >
-              <div className='relative h-[14px] w-[14px]'>
-                <Image
-                  src='/svg/previous.svg'
-                  alt='Previous'
-                  layout='fill'
-                ></Image>
-              </div>
-            </button>
-
-            {/* play/pause */}
-            <audio
-              ref={audioPlayer}
-              src={currentSelectedSong.track.preview_url}
-              preload='metadata'
-              onEnded={() =>
-                dispatch(
-                  setSongPlayer({
-                    isPlaying: true,
-                    index: currentSelectedSong.index + 1,
-                    track: data.items[currentSelectedSong.index + 1].track,
-                  })
-                )
-              }
-            ></audio>
-            {!currentSelectedSong.isPlaying ? (
-              <button
-                className='cursor-default rounded-full bg-white p-[9.5px]'
-                onClick={() => dispatch(setIsPlaying())}
-              >
+          <div className='flex w-[33rem] flex-col'>
+            <div className='flex items-center justify-center gap-x-[6px]'>
+              {/* shuffle  */}
+              <button className='cursor-not-allowed p-[9.5px]'>
                 <div className='relative h-[14px] w-[14px]'>
-                  <Image src='/svg/play.svg' alt='Play' layout='fill'></Image>
+                  <Image
+                    src='/svg/shuffle.svg'
+                    alt='Shuffle'
+                    layout='fill'
+                  ></Image>
                 </div>
               </button>
-            ) : (
+
+              {/* previous */}
               <button
-                className='cursor-default rounded-full bg-white p-[9.5px]'
-                onClick={() => dispatch(setIsPlaying())}
+                className='cursor-default p-[9.5px]'
+                onClick={() =>
+                  dispatch(
+                    setSongPlayer({
+                      isPlaying: true,
+                      index: currentSelectedSong.index - 1,
+                      track: data.items[currentSelectedSong.index - 1].track,
+                    })
+                  )
+                }
               >
                 <div className='relative h-[14px] w-[14px]'>
-                  <Image src='/svg/pause.svg' alt='Pause' layout='fill'></Image>
+                  <Image
+                    src='/svg/previous.svg'
+                    alt='Previous'
+                    layout='fill'
+                  ></Image>
                 </div>
               </button>
-            )}
 
-            {/* next */}
-            <button
-              className='cursor-default p-[9.5px]'
-              onClick={() =>
-                dispatch(
-                  setSongPlayer({
-                    isPlaying: true,
-                    index: currentSelectedSong.index + 1,
-                    track: data.items[currentSelectedSong.index + 1].track,
-                  })
-                )
-              }
-            >
-              <div className='relative h-[14px] w-[14px]'>
-                <Image src='/svg/next.svg' alt='Next' layout='fill'></Image>
-              </div>
-            </button>
+              {/* play/pause */}
+              {!currentSelectedSong.isPlaying ? (
+                <button
+                  className='cursor-default rounded-full bg-white p-[9.5px]'
+                  onClick={() => dispatch(setIsPlaying())}
+                >
+                  <div className='relative h-[14px] w-[14px]'>
+                    <Image src='/svg/play.svg' alt='Play' layout='fill'></Image>
+                  </div>
+                </button>
+              ) : (
+                <button
+                  className='cursor-default rounded-full bg-white p-[9.5px]'
+                  onClick={() => dispatch(setIsPlaying())}
+                >
+                  <div className='relative h-[14px] w-[14px]'>
+                    <Image
+                      src='/svg/pause.svg'
+                      alt='Pause'
+                      layout='fill'
+                    ></Image>
+                  </div>
+                </button>
+              )}
 
-            {/* repeat */}
-            <button className='cursor-not-allowed p-[9.5px]'>
-              <div className='relative h-[14px] w-[14px]'>
-                <Image src='/svg/repeat.svg' alt='Repeat' layout='fill'></Image>
-              </div>
-            </button>
-          </div>
+              {/* next */}
+              <button
+                className='cursor-default p-[9.5px]'
+                onClick={() =>
+                  dispatch(
+                    setSongPlayer({
+                      isPlaying: true,
+                      index: currentSelectedSong.index + 1,
+                      track: data.items[currentSelectedSong.index + 1].track,
+                    })
+                  )
+                }
+              >
+                <div className='relative h-[14px] w-[14px]'>
+                  <Image src='/svg/next.svg' alt='Next' layout='fill'></Image>
+                </div>
+              </button>
 
-          {/* progress bar and duration */}
-          <div className='mt-2 grid h-3 grid-cols-[40px,1fr,40px] gap-x-2 text-[11px]'>
-            <p className='flex justify-end'>{calculateTime(currentTime)}</p>
-            <div className='flex items-center'>
-              <input
-                id='range-player'
-                type='range'
-                defaultValue='0'
-                ref={progressBar}
-                onChange={changeRange}
-              />
+              {/* repeat */}
+              <button className='cursor-not-allowed p-[9.5px]'>
+                <div className='relative h-[14px] w-[14px]'>
+                  <Image
+                    src='/svg/repeat.svg'
+                    alt='Repeat'
+                    layout='fill'
+                  ></Image>
+                </div>
+              </button>
             </div>
-            <p className=''>
-              {duration && !isNaN(duration) && calculateTime(duration)}
-            </p>
-          </div>
-        </div>
 
-        <div className='flex w-96 items-center justify-end'>
-          <div className='flex'>
-            <button className='cursor-not-allowed p-[8.5px]'>
-              <div className='relative h-[16px] w-[16px]'>
-                <Image
-                  src='/svg/mic.svg'
-                  alt='Microphone'
-                  layout='fill'
-                ></Image>
-              </div>
-            </button>
-            <button className='cursor-not-allowed p-[8.5px]'>
-              <div className='relative h-[16px] w-[16px]'>
-                <Image src='/svg/queue.svg' alt='Queue' layout='fill'></Image>
-              </div>
-            </button>
-            <button className='cursor-not-allowed p-[8.5px]'>
-              <div className='relative h-[16px] w-[16px]'>
-                <Image
-                  src='/svg/connect-device.svg'
-                  alt='Connect Device'
-                  layout='fill'
-                ></Image>
-              </div>
-            </button>
-            <button className='cursor-not-allowed p-[8.5px]'>
-              <div className='relative h-[16px] w-[16px]'>
-                <Image src='/svg/mute.svg' alt='Mute' layout='fill'></Image>
-              </div>
-            </button>
-            <button className='cursor-default'>
-              <div className='flex w-[90px] items-center justify-center'>
+            {/* progress bar and duration */}
+            <div className='mt-2 grid h-3 grid-cols-[40px,1fr,40px] gap-x-2 text-[11px]'>
+              <p className='flex justify-end'>{calculateTime(currentTime)}</p>
+              <div className='flex items-center'>
                 <input
-                  id='volume-range-player'
+                  id='range-player'
                   type='range'
                   defaultValue='0'
-                  min={0}
-                  max={1}
-                  step={0.02}
-                  value={volume}
-                  ref={volumeProgressBar}
-                  onChange={(event) => {
-                    changeVolumeRange(event);
-                  }}
+                  ref={progressBar}
+                  onChange={changeRange}
                 />
               </div>
-            </button>
-            <button className='cursor-not-allowed p-[8.5px]'>
-              <div className='relative h-[16px] w-[16px]'>
+              <p className=''>
+                {duration && !isNaN(duration) && calculateTime(duration)}
+              </p>
+            </div>
+          </div>
+
+          <div className='flex w-96 items-center justify-end'>
+            <div className='flex'>
+              <button className='cursor-not-allowed p-[8.5px]'>
+                <div className='relative h-[16px] w-[16px]'>
+                  <Image
+                    src='/svg/mic.svg'
+                    alt='Microphone'
+                    layout='fill'
+                  ></Image>
+                </div>
+              </button>
+              <button className='cursor-not-allowed p-[8.5px]'>
+                <div className='relative h-[16px] w-[16px]'>
+                  <Image src='/svg/queue.svg' alt='Queue' layout='fill'></Image>
+                </div>
+              </button>
+              <button className='cursor-not-allowed p-[8.5px]'>
+                <div className='relative h-[16px] w-[16px]'>
+                  <Image
+                    src='/svg/connect-device.svg'
+                    alt='Connect Device'
+                    layout='fill'
+                  ></Image>
+                </div>
+              </button>
+              <button className='cursor-not-allowed p-[8.5px]'>
+                <div className='relative h-[16px] w-[16px]'>
+                  <Image src='/svg/mute.svg' alt='Mute' layout='fill'></Image>
+                </div>
+              </button>
+              <button className='cursor-default'>
+                <div className='flex w-[90px] items-center justify-center'>
+                  <input
+                    id='volume-range-player'
+                    type='range'
+                    defaultValue='0'
+                    min={0}
+                    max={1}
+                    step={0.02}
+                    value={volume}
+                    ref={volumeProgressBar}
+                    onChange={(event) => {
+                      changeVolumeRange(event);
+                    }}
+                  />
+                </div>
+              </button>
+              <button className='cursor-not-allowed p-[8.5px]'>
+                <div className='relative h-[16px] w-[16px]'>
+                  <Image
+                    src='/svg/full-screen.svg'
+                    alt='Full Screen'
+                    layout='fill'
+                  ></Image>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <style jsx>{`
+            .filter-gray {
+              filter: invert(88%) sepia(2%) saturate(28%) hue-rotate(330deg)
+                brightness(83%) contrast(84%);
+            }
+            .filter-gray:hover {
+              filter: invert(100%) sepia(99%) saturate(0%) hue-rotate(270deg)
+                brightness(104%) contrast(100%);
+            }
+          `}</style>
+        </div>
+      </div>
+
+      {/* mobile */}
+      <div className='absolute bottom-[70px] w-full md:hidden'>
+        <div className='mx-auto flex h-[54px] w-[97.5%] items-center  rounded bg-[#0D3236] p-2'>
+          <div className='relative mr-2.5 h-10 w-10 flex-shrink-0'>
+            {currentSelectedSong.track.name != '' ? (
+              <Image
+                src={currentSelectedSong.track.album.images[0].url}
+                alt='Renz'
+                layout='fill'
+                objectFit='cover'
+              ></Image>
+            ) : (
+              <span>Select a song</span>
+            )}
+          </div>
+          <div className='w-full text-[13px]'>
+            <p className='relative -bottom-1 font-spotify-circular-bold text-white'>
+              {currentSelectedSong.track.name}
+            </p>
+            <p className='font-spotify-circular-book text-spotify-gray'>
+              {currentSelectedSong.track.artists[0].name}
+            </p>
+          </div>
+
+          <div className='flex'>
+            <div className='flex w-9 justify-center'>
+              <div className='relative h-6 w-6 '>
                 <Image
-                  src='/svg/full-screen.svg'
-                  alt='Full Screen'
+                  src='/svg/heart-mobile.svg'
+                  alt='Renz'
                   layout='fill'
+                  objectFit='cover'
                 ></Image>
               </div>
+            </div>
+            <button
+              className='flex w-9 cursor-default justify-center'
+              onClick={() => dispatch(setIsPlaying())}
+            >
+              {!currentSelectedSong.isPlaying ? (
+                <div className='relative h-6 w-6'>
+                  <Image
+                    src='/svg/play-mobile.svg'
+                    alt='Renz'
+                    layout='fill'
+                    objectFit='cover'
+                  ></Image>
+                </div>
+              ) : (
+                <div className='relative h-6 w-6'>
+                  <Image
+                    src='/svg/pause-mobile.svg'
+                    alt='Renz'
+                    layout='fill'
+                    objectFit='cover'
+                  ></Image>
+                </div>
+              )}
             </button>
           </div>
         </div>
-
-        <style jsx>{`
-          .filter-gray {
-            filter: invert(88%) sepia(2%) saturate(28%) hue-rotate(330deg)
-              brightness(83%) contrast(84%);
-          }
-          .filter-gray:hover {
-            filter: invert(100%) sepia(99%) saturate(0%) hue-rotate(270deg)
-              brightness(104%) contrast(100%);
-          }
-        `}</style>
       </div>
-    </div>
+    </>
   );
 }
 

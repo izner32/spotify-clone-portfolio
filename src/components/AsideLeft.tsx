@@ -68,7 +68,7 @@ const AsideLeft: React.FC<{ initialAsideLeftHandler: string }> = ({
           y: 0,
         });
       }}
-      className='relative truncate bg-black text-sm  text-spotify-gray'
+      className='relative hidden truncate bg-black  text-sm text-spotify-gray lg:block'
     >
       <div className=''>
         <div className='mt-[23px] w-auto pb-1 pl-6'>
@@ -215,7 +215,7 @@ const AsideLeft: React.FC<{ initialAsideLeftHandler: string }> = ({
             })}
           </ul>
         </div>
-        <div className='relative -bottom-3 h-10 items-center px-6 font-spotify-circular-bold hover:text-white '>
+        <div className='absolute bottom-[90px] h-10 w-full items-center bg-black px-6 font-spotify-circular-bold hover:text-white '>
           <button className='flex h-full w-full  items-center gap-x-5'>
             <Image
               src='/images/linkedin.png'

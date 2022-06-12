@@ -30,7 +30,7 @@
 
 /* scrollbar  */
 ::-webkit-scrollbar {
-  height: 5px;
+  height: 0px;
   width: 10px;
   background-color: transparent;
 }
@@ -53,13 +53,13 @@
   border-radius: 9999px;
 
   background-image: linear-gradient(white, white);
-  background-size: 10% 100%;
+  background-size: 0% 100%;
   background-repeat: no-repeat;
 }
 
 #range-player:hover {
   background-image: linear-gradient(#1ed760, #1ed760);
-  background-size: 70% 100%;
+  background-size: 0% 100%;
   background-repeat: no-repeat;
 }
 
@@ -71,13 +71,13 @@
   border-radius: 9999px;
 
   background-image: linear-gradient(white, white);
-  background-size: 50% 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
 #volume-range-player:hover {
   background-image: linear-gradient(#1ed760, #1ed760);
-  background-size: 70% 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
