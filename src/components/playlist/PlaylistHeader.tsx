@@ -8,7 +8,15 @@ import { msToTime } from '@/lib/msToTime';
 
 import { setSongPlayer } from '@/redux/songPlayerSlice';
 
-function PlaylistHeader({ data, details, playlistNumber }) {
+function PlaylistHeader({
+  data,
+  details,
+  playlistNumber,
+}: {
+  data: any;
+  details: any;
+  playlistNumber: number;
+}) {
   const dispatch = useDispatch();
   const playlistLength: number = data.items.length;
   const totalLengthOfSongs: number = data.items.reduce(
