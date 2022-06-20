@@ -18,26 +18,23 @@ function Profile() {
       {/* desktop */}
       <div className='hidden gap-x-6 px-8 pt-6 pb-6  md:flex'>
         <div className=''>
-          <div className='relative h-60 w-60 overflow-hidden rounded-full '>
+          <div className='relative h-60 w-60 overflow-hidden rounded-full'>
             <Image
-              src='/images/renz.png'
+              src='/images/profile-cover.png'
               alt='Renz'
               layout='fill'
               objectFit='cover'
-              objectPosition='top'
             ></Image>
           </div>
         </div>
         <div className='flex flex-col justify-end'>
           <p className='font-spotify-circular-bold text-[12px]'>PROFILE</p>
           <p className='whitespace-nowrap pt-[19px] pb-1 font-spotify-circular-bold text-7xl'>
-            Renz Carillo
+            Renz&nbsp;Carillo
           </p>
-          <div className=' font-spotify-circular-light text-sm'>
-            <p className='float-left'>
-              &nbsp;currently learning Haskell and DevOps
-            </p>
-            <p className='float-left'>,crc1046@dlsud.edu.ph</p>
+          <div className='flex font-spotify-circular-light text-sm'>
+            <p className=''>&nbsp;currently learning DevOps</p>
+            <p className=''>,crc1046@dlsud.edu.ph</p>
           </div>
         </div>
       </div>
@@ -47,24 +44,22 @@ function Profile() {
         <div className='flex gap-x-[14px]'>
           <div className='relative h-[150px] w-[150px] flex-shrink-0 overflow-hidden rounded-full'>
             <Image
-              src='/images/renz.png'
+              src='/images/profile-cover.png'
               alt='Renz'
               layout='fill'
               objectFit='cover'
               objectPosition='top'
             ></Image>
           </div>
-          <p className='flex items-center font-spotify-circular-bold text-2xl'>
-            Renz Carillo
+          <p className=' flex items-center overflow-hidden font-spotify-circular-bold text-2xl'>
+            Renz&nbsp;Carillo
           </p>
         </div>
-        <div className='flex'>
-          <p className='font-spotify-circular-light text-sm'>
-            currently learning Haskell and DevOps
+        <div className='flex flex-wrap'>
+          <p className='font-spotify-circular-light  '>
+            currently learning DevOps
           </p>
-          <p className='font-spotify-circular-light text-sm'>
-            ,crc1046@dlsud.edu.ph
-          </p>
+          <p className='font-spotify-circular-light  '>,crc1046@dlsud.edu.ph</p>
         </div>
       </div>
 

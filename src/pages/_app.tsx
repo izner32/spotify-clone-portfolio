@@ -1,5 +1,6 @@
 import type { AppContext, AppProps } from 'next/app';
 import App from 'next/app';
+import Head from 'next/head';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
@@ -23,16 +24,26 @@ function MyApp({
   initialAsideRightHandler,
 }: AppPropsGetInitialProps) {
   return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <Layout
-          initialAsideLeftHandler={initialAsideLeftHandler}
-          initialAsideRightHandler={initialAsideRightHandler}
-        >
-          <Component {...pageProps} />
-        </Layout>
-      </PersistGate>
-    </Provider>
+    <>
+      <Head>
+        <title>Renz Carillo - Portfolio Web Player</title>
+        <meta
+          name='Renz Carillo'
+          content='Renz Carillo - Portfolio Web Player'
+        />
+        <link rel='icon' href='/favicon/favicon.ico' />
+      </Head>
+      <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor}>
+          <Layout
+            initialAsideLeftHandler={initialAsideLeftHandler}
+            initialAsideRightHandler={initialAsideRightHandler}
+          >
+            <Component {...pageProps} />
+          </Layout>
+        </PersistGate>
+      </Provider>
+    </>
   );
 }
 

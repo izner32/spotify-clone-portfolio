@@ -111,7 +111,7 @@ const AsideRight: React.FC<asideRightProps> = ({
         </div>
         <div className='mb-6 font-spotify-circular-light text-sm text-[#c6c6c6]'>
           <p className='mb-6'>
-            Let friends and followers on Spotify see what you&apos;re listening
+            Let friends and followers on Renzify see what you&apos;re listening
             to
           </p>
           <ul className='mb-6 flex flex-col gap-y-4'>

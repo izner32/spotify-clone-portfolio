@@ -128,7 +128,9 @@ function Player() {
             <div className=' w-full'>
               <div className='flex items-center gap-x-[14px]'>
                 <div className='h-8 w-full max-w-[244px]'>
-                  <p className=''>{currentSelectedSong.track.name}</p>
+                  <p className='overflow-hidden text-ellipsis whitespace-nowrap'>
+                    {currentSelectedSong.track.name}
+                  </p>
                   <p className='text-[11px]'>
                     {currentSelectedSong.track.artists[0].name}
                   </p>
@@ -350,8 +352,8 @@ function Player() {
               <span>Select a song</span>
             )}
           </div>
-          <div className='w-full text-[13px]'>
-            <p className='relative -bottom-1 font-spotify-circular-bold text-white'>
+          <div className='w-full overflow-hidden text-[13px]'>
+            <p className=' relative -bottom-1 overflow-hidden text-ellipsis whitespace-nowrap font-spotify-circular-bold text-white'>
               {currentSelectedSong.track.name}
             </p>
             <p className='font-spotify-circular-book text-spotify-gray'>

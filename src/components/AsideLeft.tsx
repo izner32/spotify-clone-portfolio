@@ -73,7 +73,7 @@ const AsideLeft: React.FC<{ initialAsideLeftHandler: string }> = ({
       <div className=''>
         <div className='mt-[23px] w-auto pb-1 pl-6'>
           <Image
-            src='/svg/Spotify.svg'
+            src='/images/website-logo.png'
             alt='Logo'
             width={120}
             height={42}
@@ -218,7 +218,7 @@ const AsideLeft: React.FC<{ initialAsideLeftHandler: string }> = ({
         <div className='absolute bottom-[90px] h-10 w-full items-center bg-black px-6 font-spotify-circular-bold hover:text-white '>
           <button className='flex h-full w-full  items-center gap-x-5'>
             <Image
-              src='/images/linkedin.png'
+              src='/images/linkedin-logo.png'
               alt='LinkedIn'
               width={20}
               height={20}

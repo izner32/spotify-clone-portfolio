@@ -66,7 +66,7 @@ const CardModal: React.FC<Props> = (props) => {
       </div>
     </div>
   ) : props.type == 'Certifications' ? (
-    <div className='fixed top-1/2 left-1/2 z-30 h-fit w-[250px] -translate-x-1/2 -translate-y-1/2 rounded-md bg-spotify-bg-gray bg-black md:w-[500px]'>
+    <div className='fixed top-1/2 left-1/2 z-30 h-fit w-[250px] -translate-x-1/2 -translate-y-1/2 rounded-md bg-spotify-bg-gray md:w-[500px]'>
       <div className='absolute -top-3 -right-3 z-20 h-8 w-8 rounded-full bg-white '>
         <button
           className='h-full w-full rounded-full'

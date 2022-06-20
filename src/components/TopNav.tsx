@@ -50,11 +50,10 @@ function TopNav() {
               <div className='flex items-center justify-center rounded-full p-[6px]'>
                 <div className='relative h-6 w-6 overflow-hidden rounded-full p-[6px]'>
                   <Image
-                    src='/images/renz.png'
+                    src='/images/profile-cover.png'
                     alt='Renz'
                     layout='fill'
                     objectFit='cover'
-                    objectPosition='middle'
                   ></Image>
                 </div>
               </div>
