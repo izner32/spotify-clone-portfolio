@@ -1,130 +1,18 @@
 [
   {
-    "title": "CSS Essential Training",
-    "sub-title": "By LinkedIn Learning",
+    "title": "Certified Cloud Practitioner",
+    "sub-title": "By Amazon Web Services",
     "tools": [],
-    "cover-image": "/images/certification/linkedin-certification.png",
-    "card-image":"/images/certification/certification-images/css-essential-training.png",
-    "card-link":"https://www.linkedin.com/learning/certificates/d4bfabd8616106e5e8dd9e5628021f5740b5361fed5535b5506ec38a068d4762?trk=share_certificate"
+    "cover-image": "/images/certification/aws-certification.png",
+    "card-image": "/images/certification/certification-images/certified-cloud-practitioner.png",
+    "card-link": "https://www.credly.com/badges/05fc9a74-053d-469c-843a-fa64d63d0b69/public_url"
   },
   {
-    "title": "Data Engineering for Everyone",
-    "sub-title": "By DataCamp",
+    "title": "Solutions Architect - Associate",
+    "sub-title": "By Amazon Web Services",
     "tools": [],
-    "cover-image": "/images/certification/datacamp-certification.png",
-    "card-image":
-      "/images/certification/certification-images/data-engineering-for-everyone.png",
-    "card-link":
-      "https://www.datacamp.com/statement-of-accomplishment/course/d71a65f0b1955f33f3ce90e28c97de38aa07d55f"
-  },
-  {
-    "title": "Data Warehouse Fundamentals",
-    "sub-title": "By Udemy",
-    "tools": [],
-    "cover-image": "/images/certification/udemy-certification.png",
-    "card-image":
-      "/images/certification/certification-images/data-warehouse-fundamentals-for-beginners.png",
-    "card-link":
-      "https://www.udemy.com/certificate/UC-45c5938e-03b8-4c3a-9ece-f0a865ab3665/"
-  },
-  {
-    "title": "Introduction to Airflow in Python",
-    "sub-title": "By DataCamp",
-    "tools": [],
-    "cover-image": "/images/certification/datacamp-certification.png",
-    "card-image":
-      "/images/certification/certification-images/introduction-to-airflow-in-python.png",
-    "card-link":
-      "https://www.datacamp.com/statement-of-accomplishment/course/ebb89127a715dcf5575fc9bb8e0f231bc48c7cfe"
-  },
-  {
-    "title": "Introduction to Scala",
-    "sub-title": "By DataCamp",
-    "tools": [],
-    "cover-image": "/images/certification/datacamp-certification.png",
-    "card-image":
-      "/images/certification/certification-images/introduction-to-scala.png",
-    "card-link":
-      "https://www.datacamp.com/statement-of-accomplishment/course/af050e64c49b222b93f176c047b290e55647a7b3"
-  },
-  {
-    "title": "Introduction to Shell",
-    "sub-title": "By DataCamp",
-    "tools": [],
-    "cover-image": "/images/certification/datacamp-certification.png",
-    "card-image":
-      "/images/certification/certification-images/introduction-to-shell.png",
-    "card-link":
-      "https://www.datacamp.com/statement-of-accomplishment/course/8ff9edd82d73b5ed674a2455db3d425899598bd4"
-  },
-  {
-    "title": "Javascript Essential Training",
-    "sub-title": "By LinkedIn Learning",
-    "tools": [],
-    "cover-image": "/images/certification/linkedin-certification.png",
-    "card-image":
-      "/images/certification/certification-images/javascript-essential-training.png",
-    "card-link":
-      "https://www.linkedin.com/learning/certificates/beacff158979ca3164e13003d0f8f2530a9c71ff222c8282fe0068096119aa9c?trk=share_certificate"
-  },
-  {
-    "title": "HTML Essential Training",
-    "sub-title": "By LinkedIn Learning",
-    "tools": [],
-    "cover-image": "/images/certification/linkedin-certification.png",
-    "card-image":
-      "/images/certification/certification-images/html-essential-traning.png",
-    "card-link":
-      "https://www.linkedin.com/learning/certificates/bed26215aef59f2cf7515de98788fda45d6b6f6d9d012ee91c8794ae4668fd62?trk=share_certificate"
-  },
-  {
-    "title": "Learning SQL Programming",
-    "sub-title": "By LinkedIn Learning",
-    "tools": [],
-    "cover-image": "/images/certification/linkedin-certification.png",
-    "card-image":
-      "/images/certification/certification-images/learning-sql-programming.png",
-    "card-link":
-      "https://www.linkedin.com/learning/certificates/787b0a9ca788ab90587ae4a2102ea36e4bd571d08332284897ccee0ae236a480?trk=share_certificate"
-  },
-  {
-    "title": "Programming Foundations: Databases",
-    "sub-title": "By LinkedIn Learning",
-    "tools": [],
-    "cover-image": "/images/certification/linkedin-certification.png",
-    "card-image":
-      "/images/certification/certification-images/programming-foundation-database.png",
-    "card-link":
-      "https://www.linkedin.com/learning/certificates/489095518945945a05e1a92a3aba7b2dcb8ed7fb5bd573a332af0b2873b7ae9d?trk=share_certificate"
-  },
-  {
-    "title": "Python 3 Master Course",
-    "sub-title": "By Udemy",
-    "tools": [],
-    "cover-image": "/images/certification/udemy-certification.png",
-    "card-image":
-      "/images/certification/certification-images/python-3-master-course.png",
-    "card-link":
-      "https://www.udemy.com/certificate/UC-b7e621b2-0ab7-418b-9704-6a28adabfa90/"
-  },
-  {
-    "title": "Streamlined Data Ingestion with Pandas",
-    "sub-title": "By DataCamp",
-    "tools": [],
-    "cover-image": "/images/certification/datacamp-certification.png",
-    "card-image":
-      "/images/certification/certification-images/streamlined-data-ingestion.png",
-    "card-link":
-      "https://www.datacamp.com/statement-of-accomplishment/course/88c714a39707105410b688221f3e2abd5e957f9b"
-  },
-  {
-    "title": "Writing Efficient Python Code",
-    "sub-title": "By DataCamp",
-    "tools": [],
-    "cover-image": "/images/certification/datacamp-certification.png",
-    "card-image":
-      "/images/certification/certification-images/writing-efficient-python-code.png",
-    "card-link":
-      "https://www.datacamp.com/statement-of-accomplishment/course/dc2e82c2e2a0a97162d313dfd556822de50616c7"
+    "cover-image": "/images/certification/aws-certification.png",
+    "card-image": "/images/certification/certification-images/solutions-architect-associate.png",
+    "card-link": "https://www.credly.com/badges/546b2459-174b-4158-8119-8521025d4fd9/linked_in"
   }
 ]

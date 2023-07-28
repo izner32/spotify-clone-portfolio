@@ -11,9 +11,9 @@
     "title": "Mint Smart Contract",
     "sub-title": "Allowed minting for the creation of thousands of NFTs",
     "tools": ["Solidity"],
-    "cover-image":"/images/projects/smart-contract.png",
-    "card-image":"/images/projects/smart-contract.png",
-    "card-link":"https://polygonscan.com/address/0xe15dd32f646d505f89c94df0d62d18e975637836#code"
+    "cover-image": "/images/projects/smart-contract.png",
+    "card-image": "/images/projects/smart-contract.png",
+    "card-link": "https://polygonscan.com/address/0xe15dd32f646d505f89c94df0d62d18e975637836#code"
   },
   {
     "title": "Analytics Engineering on Scraped Top Pharmacies",
@@ -41,7 +41,7 @@
   },
   {
     "title": "Covid Data Pipeline",
-    "sub-title":"Architected and built a data pipeline utilizing aws services",
+    "sub-title": "Architected and built a data pipeline utilizing aws services",
     "tools": [
       "AWS - Glue",
       "AWS - S3",

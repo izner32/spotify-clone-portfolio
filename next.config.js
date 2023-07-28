@@ -6,11 +6,9 @@ module.exports = {
 
   reactStrictMode: true,
 
- // Uncoment to add domain whitelist
+  // Uncoment to add domain whitelist
   images: {
-    domains: [
-      'i.scdn.co',
-    ],
+    domains: ['i.scdn.co'],
   },
 
   // SVGR

@@ -33,7 +33,7 @@ function Profile() {
             Renz&nbsp;Carillo
           </p>
           <div className='flex font-spotify-circular-light text-sm'>
-            <p className=''>&nbsp;currently learning DevOps</p>
+            <p className=''>&nbsp;aspiring DevOps Engineer/SRE</p>
             <p className=''>,crc1046@dlsud.edu.ph</p>
           </div>
         </div>
@@ -57,7 +57,7 @@ function Profile() {
         </div>
         <div className='flex flex-wrap'>
           <p className='font-spotify-circular-light  '>
-            currently learning DevOps
+            aspiring DevOps Engineer/SRE
           </p>
           <p className='font-spotify-circular-light  '>,crc1046@dlsud.edu.ph</p>
         </div>

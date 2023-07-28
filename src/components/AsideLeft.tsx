@@ -215,18 +215,24 @@ const AsideLeft: React.FC<{ initialAsideLeftHandler: string }> = ({
             })}
           </ul>
         </div>
-        <div className='absolute bottom-[90px] h-10 w-full items-center bg-black px-6 font-spotify-circular-bold hover:text-white '>
-          <button className='flex h-full w-full  items-center gap-x-5'>
-            <Image
-              src='/images/linkedin-logo.png'
-              alt='LinkedIn'
-              width={20}
-              height={20}
-            ></Image>
-            <p className='relative'>
-              <span className=' whitespace-nowrap'>Follow</span>
-            </p>
-          </button>
+        <div className='absolute h-10 w-full items-center bg-black px-6 font-spotify-circular-bold hover:text-white '>
+          <a
+            href='https://www.linkedin.com/in/renz-c/'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <button className='flex h-full w-full  items-center gap-x-5'>
+              <Image
+                src='/images/linkedin-logo.png'
+                alt='LinkedIn'
+                width={20}
+                height={20}
+              ></Image>
+              <p className='relative'>
+                <span className=' whitespace-nowrap'>Follow</span>
+              </p>
+            </button>
+          </a>
         </div>
       </div>
     </Resizable>

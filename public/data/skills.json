@@ -32,6 +32,14 @@
     "card-link": ""
   },
   {
+    "title": "C++",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/c++.png",
+    "card-image": "/images/skills/c++.png",
+    "card-link": ""
+  },
+  {
     "title": "MQL5",
     "sub-title": "By Renz Carillo",
     "tools": [],
@@ -104,6 +112,14 @@
     "card-link": ""
   },
   {
+    "title": "React Native",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/tailwindcss.png",
+    "card-image": "/images/skills/tailwindcss.png",
+    "card-link": ""
+  },
+  {
     "title": "Pandas",
     "sub-title": "By Renz Carillo",
     "tools": [],
@@ -117,6 +133,78 @@
     "tools": [],
     "cover-image": "/images/skills/git.png",
     "card-image": "/images/skills/git.png",
+    "card-link": ""
+  },
+  {
+    "title": "AWS",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/aws.png",
+    "card-image": "/images/skills/aws.png",
+    "card-link": ""
+  },
+  {
+    "title": "Bash",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/bash.png",
+    "card-image": "/images/skills/bash.png",
+    "card-link": ""
+  },
+  {
+    "title": "Docker",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/docker.png",
+    "card-image": "/images/skills/docker.png",
+    "card-link": ""
+  },
+  {
+    "title": "GitHub Actions",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/github-actions.png",
+    "card-image": "/images/skills/github-actions.png",
+    "card-link": ""
+  },
+  {
+    "title": "HashiCorp Vault",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/hashicorp-vault.png",
+    "card-image": "/images/skills/hashicorp-vault.png",
+    "card-link": ""
+  },
+  {
+    "title": "Helm",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/helm.png",
+    "card-image": "/images/skills/helm.png",
+    "card-link": ""
+  },
+  {
+    "title": "Jenkins",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/jenkins.png",
+    "card-image": "/images/skills/jenkins.png",
+    "card-link": ""
+  },
+  {
+    "title": "Kubernetes",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/kubernetes.png",
+    "card-image": "/images/skills/kubernetes.png",
+    "card-link": ""
+  },
+  {
+    "title": "Terraform",
+    "sub-title": "By Renz Carillo",
+    "tools": [],
+    "cover-image": "/images/skills/terraform.png",
+    "card-image": "/images/skills/terraform.png",
     "card-link": ""
   }
 ]

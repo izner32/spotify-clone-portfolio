@@ -110,7 +110,11 @@ function Player() {
       ></audio>
 
       {/* desktop */}
-      <div className='absolute bottom-0 hidden h-[90px] w-full border-t-2 border-spotify-bg-light-gray bg-spotify-bg-gray p-4 text-xs text-white md:block'>
+      <div
+        className={`absolute bottom-0 h-[90px] w-full border-t-2 border-spotify-bg-light-gray bg-spotify-bg-gray p-4 text-xs text-white ${
+          currentSelectedSong.track.name != '' ? 'hidden md:block' : 'hidden'
+        }`}
+      >
         <div className=' flex justify-between'>
           <div className='flex h-fit w-96 items-center justify-center gap-x-[14px]'>
             <div className='relative flex h-14 w-14 flex-shrink-0 items-center justify-center text-center'>
@@ -122,7 +126,7 @@ function Player() {
                   objectFit='cover'
                 ></Image>
               ) : (
-                <p className=''>Select a song</p>
+                <p className=''>No song</p>
               )}
             </div>
             <div className=' w-full'>
@@ -338,7 +342,11 @@ function Player() {
       </div>
 
       {/* mobile */}
-      <div className='absolute bottom-[70px] w-full md:hidden'>
+      <div
+        className={`absolute bottom-[70px] w-full ${
+          currentSelectedSong.track.name != '' ? 'md:hidden' : 'hidden'
+        }`}
+      >
         <div className='mx-auto flex h-[54px] w-[97.5%] items-center  rounded bg-[#0D3236] p-2'>
           <div className='relative mr-2.5 h-10 w-10 flex-shrink-0'>
             {currentSelectedSong.track.name != '' ? (
@@ -349,7 +357,7 @@ function Player() {
                 objectFit='cover'
               ></Image>
             ) : (
-              <span>Select a song</span>
+              <span>No song</span>
             )}
           </div>
           <div className='w-full overflow-hidden text-[13px]'>
