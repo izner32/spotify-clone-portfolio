@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function BottomNav() {
   return (
-    <div className='absolute bottom-0 grid h-[70px] w-full grid-cols-4 bg-black bg-opacity-50 text-white md:hidden'>
+    <div className='fixed bottom-0 grid h-[70px] w-full grid-cols-4 bg-black bg-opacity-50 text-white md:hidden'>
       <Link href='/' passHref>
         <div className='flex flex-col items-center justify-center'>
           <div className='relative h-6 w-6'>

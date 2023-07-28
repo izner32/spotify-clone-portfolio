@@ -111,7 +111,7 @@ function Player() {
 
       {/* desktop */}
       <div
-        className={`absolute bottom-0 h-[90px] w-full border-t-2 border-spotify-bg-light-gray bg-spotify-bg-gray p-4 text-xs text-white ${
+        className={`fixed bottom-0 h-[90px] w-full border-t-2 border-spotify-bg-light-gray bg-spotify-bg-gray p-4 text-xs text-white ${
           currentSelectedSong.track.name != '' ? 'hidden md:block' : 'hidden'
         }`}
       >
@@ -343,7 +343,7 @@ function Player() {
 
       {/* mobile */}
       <div
-        className={`absolute bottom-[70px] w-full ${
+        className={`fixed bottom-[70px] w-full ${
           currentSelectedSong.track.name != '' ? 'md:hidden' : 'hidden'
         }`}
       >
