@@ -1,7 +1,7 @@
 [
   {
     "title": "Cyber Outlaws",
-    "sub-title": "Full stack web3 application with log in metamask feature",
+    "sub-title": "A web3 app with Metamask login feature",
     "tools": ["NextJS", "NodeJS", "MongoDB", "TailwindCSS"],
     "cover-image": "/images/projects/cyber-outlaws.png",
     "card-image": "/images/projects/cyber-outlaws.png",
@@ -9,7 +9,7 @@
   },
   {
     "title": "Mint Smart Contract",
-    "sub-title": "Allowed minting for the creation of thousands of NFTs",
+    "sub-title": "A secure smart contract for minting thousands of Cyber Outlaws NFTs",
     "tools": ["Solidity"],
     "cover-image": "/images/projects/smart-contract.png",
     "card-image": "/images/projects/smart-contract.png",
@@ -17,7 +17,7 @@
   },
   {
     "title": "Analytics Engineering on Scraped Top Pharmacies",
-    "sub-title": "Performed data transformation and cleaning for different scraped data then geocoded the seized address",
+    "sub-title": "Handled data transformation, cleaning, and geocoding for scraped addresses",
     "tools": [
       "BeautifulSoup4",
       "GeoPy",
@@ -33,7 +33,7 @@
   },
   {
     "title": "Algorithmic Trading Bot",
-    "sub-title": "Mean reversion system that triggers a buy/sell dependent on the customized candlestick patterns and multiple trading indicators incorporated",
+    "sub-title": "A mean reversion system with custom candlestick patterns and multiple trading indicators",
     "tools": ["MQL5"],
     "cover-image": "/images/projects/algo-bot.png",
     "card-image": "/images/projects/algo-bot.png",
@@ -41,7 +41,7 @@
   },
   {
     "title": "Covid Data Pipeline",
-    "sub-title": "Architected and built a data pipeline utilizing aws services",
+    "sub-title": "Architected and built a data pipeline utilizing AWS services",
     "tools": [
       "AWS - Glue",
       "AWS - S3",
@@ -63,7 +63,7 @@
   },
   {
     "title": "LinkedIn Scraper",
-    "sub-title": "Scraped user and their public info based on a keyword",
+    "sub-title": "A LinkedIn scraper that gathers user data based on keyword matches",
     "tools": ["BeautifulSoup4", "Python", "Selenium"],
     "cover-image": "/images/projects/linkedin-scraper.png",
     "card-image": "/images/projects/linkedin-scraper.png",

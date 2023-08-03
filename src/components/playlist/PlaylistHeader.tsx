@@ -140,7 +140,7 @@ function PlaylistHeader({
         <div className='mb-2 flex gap-x-1.5'>
           <div className='relative h-6 w-6 flex-shrink-0 flex-grow-0 overflow-hidden rounded-full'>
             <Image
-              src='/images/renz.png'
+              src='/images/profile-cover.png'
               alt='Renz'
               layout='fill'
               objectFit='cover'
